@@ -1,6 +1,6 @@
 {
   "name": "@discretize/globals",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "MUI dependencies, global variables, theme related stuff",
   "author": "gw2princeps",
   "license": "MIT",
@@ -16,7 +16,7 @@
   "//types": "dist/index.d.ts",
   "scripts": {
     "build": "node ../build.mjs",
-    "prepublish": "yarn build"
+    "prepublish": "pnpm build"
   },
   "dependencies": {
     "@mui/icons-material": "^5.10.9",

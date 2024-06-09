@@ -18,7 +18,7 @@ import { IconProps } from '../Icon/Icon';
 export type ItemUpgrades = (number | [number, number])[]; // ItemId, or [ItemId, amount] for runes
 export interface ItemInternalProps {
   dataItem: GW2ApiItem;
-  dataUpgrades: [GW2ApiItem, number][];
+  dataUpgrades?: [GW2ApiItem, number][];
   text?: string | ((text: string) => string);
   count?: number;
   stat?: ItemStatName; // Allow explicitly forcing a certain stat on an item. Many items allow multiple stats and dont provide a "default" one
@@ -38,7 +38,7 @@ export interface ItemInternalProps {
 const ItemInternal = (props: ItemInternalProps): ReactElement => {
   const {
     dataItem: itemdata,
-    dataUpgrades: upgradedata,
+    dataUpgrades: upgradedata = [],
     text: textProps,
     count = 1,
     stat: statRaw,
