@@ -22,8 +22,8 @@
     "prepublish": "pnpm build"
   },
   "dependencies": {
-    "@discretize/gw2-ui-new": "workspace:^",
-    "@discretize/typeface-menomonia": "workspace:^",
+    "@discretize/gw2-ui-new": "*",
+    "@discretize/typeface-menomonia": "*",
     "classnames": "^2.3.1",
     "typeface-fira-mono": "^0.0.72",
     "typeface-muli": "^1.1.3",
