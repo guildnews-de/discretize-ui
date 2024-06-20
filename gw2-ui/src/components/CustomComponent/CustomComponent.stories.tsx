@@ -1,4 +1,4 @@
-import type { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn, StoryObj } from '@storybook/react';
 import CustomComponent from './CustomComponent';
 
 const meta: Meta<typeof CustomComponent> = {
@@ -10,13 +10,14 @@ const meta: Meta<typeof CustomComponent> = {
       control: { type: 'text' },
     },
   },
-} as Meta<typeof CustomComponent>;
+};
+export default meta;
 
 const Template: StoryFn<typeof CustomComponent> = (args) => {
   return <CustomComponent {...args} />;
 };
 
-export const Single = {
+export const Single: StoryObj<typeof CustomComponent> = {
   render: Template,
 
   args: {

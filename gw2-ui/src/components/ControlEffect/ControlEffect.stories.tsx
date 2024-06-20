@@ -1,4 +1,5 @@
-import type { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn, StoryObj } from '@storybook/react';
+import React from 'react';
 import ControlEffect from './ControlEffect';
 import { APILanguageProvider } from '../../i18n';
 
@@ -8,14 +9,15 @@ const meta: Meta<typeof ControlEffect> = {
   argTypes: {
     className: { control: false },
   },
-} as Meta<typeof ControlEffect>;
+};
+export default meta;
 
 const Template: StoryFn<typeof ControlEffect> = (args) => {
 const Template: StoryFn<typeof ControlEffect> = (args) => {
   return <ControlEffect {...args} />;
 };
 
-export const Daze = {
+export const Daze: StoryObj<typeof ControlEffect> = {
   render: Template,
 
   args: {

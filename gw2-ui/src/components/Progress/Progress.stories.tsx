@@ -1,13 +1,15 @@
-import type { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn, StoryObj } from '@storybook/react';
+import React from 'react';
 import Progress from './Progress';
 
 const meta: Meta<typeof Progress> = {
   title: 'Helper Components/Progress',
   component: Progress,
-  argTypes: {
-    className: { control: false },
-  },
-} as Meta<typeof Progress>;
+  // argTypes: {
+  //   className: { control: false },
+  // },
+};
+export default meta;
 
 const Template: StoryFn<typeof Progress> = (args) => {
 const Template: StoryFn<typeof Progress> = (args) => {
@@ -18,6 +20,6 @@ const Template: StoryFn<typeof Progress> = (args) => {
   );
 };
 
-export const Simple = {
+export const Simple: StoryObj<typeof Progress> = {
   render: Template,
 };

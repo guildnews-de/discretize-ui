@@ -1,4 +1,5 @@
-import type { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn, StoryObj } from '@storybook/react';
+import React from 'react';
 import IconWithText from './IconWithText';
 
 const meta: Meta<typeof IconWithText> = {
@@ -7,7 +8,8 @@ const meta: Meta<typeof IconWithText> = {
   argTypes: {
     className: { control: false },
   },
-} as Meta<typeof IconWithText>;
+};
+export default meta;
 
 const Template: StoryFn<typeof IconWithText> = (args) => {
 const Template: StoryFn<typeof IconWithText> = (args) => {
@@ -18,7 +20,7 @@ const Template: StoryFn<typeof IconWithText> = (args) => {
   );
 };
 
-export const BaneSignet = {
+export const BaneSignet: StoryObj<typeof IconWithText> = {
   render: Template,
 
   args: {
@@ -27,7 +29,7 @@ export const BaneSignet = {
   },
 };
 
-export const Loading = {
+export const Loading: StoryObj<typeof IconWithText> = {
   render: Template,
 
   args: {

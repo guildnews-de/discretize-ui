@@ -1,4 +1,5 @@
-import type { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn, StoryObj } from '@storybook/react';
+import React from 'react';
 import Augmentation from './Augmentation';
 
 const meta: Meta<typeof Augmentation> = {
@@ -7,14 +8,15 @@ const meta: Meta<typeof Augmentation> = {
   argTypes: {
     className: { control: false },
   },
-} as Meta<typeof Augmentation>;
+};
+export default meta;
 
 const Template: StoryFn<typeof Augmentation> = (args) => {
 const Template: StoryFn<typeof Augmentation> = (args) => {
   return <Augmentation {...args} />;
 };
 
-export const God = {
+export const God: StoryObj<typeof Augmentation> = {
   render: Template,
 
   args: {

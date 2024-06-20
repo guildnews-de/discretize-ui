@@ -1,4 +1,5 @@
-import type { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn, StoryObj } from '@storybook/react';
+import React from 'react';
 import TraitLine from './TraitLine';
 import Specialization from '../Specialization/Specialization';
 
@@ -10,14 +11,15 @@ const meta: Meta<typeof TraitLine> = {
     onSelect: { control: false },
     onReset: { control: false },
   },
-} as Meta<typeof TraitLine>;
+};
+export default meta;
 
 const Template: StoryFn<typeof TraitLine> = (args) => {
 const Template: StoryFn<typeof TraitLine> = (args) => {
   return <TraitLine {...args} onSelect={undefined} onReset={undefined} />;
 };
 
-export const Simple = {
+export const Simple: StoryObj<typeof TraitLine> = {
   render: Template,
 
   args: {

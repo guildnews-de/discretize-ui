@@ -1,4 +1,5 @@
-import type { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn, StoryObj } from '@storybook/react';
+import React from 'react';
 import MistlockInstability from './MistlockInstability';
 
 const meta: Meta<typeof MistlockInstability> = {
@@ -7,14 +8,15 @@ const meta: Meta<typeof MistlockInstability> = {
   argTypes: {
     className: { control: false },
   },
-} as Meta<typeof MistlockInstability>;
+};
+export default meta;
 
 const Template: StoryFn<typeof MistlockInstability> = (args) => {
 const Template: StoryFn<typeof MistlockInstability> = (args) => {
   return <MistlockInstability {...args} />;
 };
 
-export const Simple = {
+export const Simple: StoryObj<typeof MistlockInstability> = {
   render: Template,
 
   args: {

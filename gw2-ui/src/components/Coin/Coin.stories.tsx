@@ -1,4 +1,5 @@
-import type { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn, StoryObj } from '@storybook/react';
+import React from 'react';
 import Coin from './Coin';
 
 const meta: Meta<typeof Coin> = {
@@ -7,14 +8,15 @@ const meta: Meta<typeof Coin> = {
   argTypes: {
     className: { control: false },
   },
-} as Meta<typeof Coin>;
+};
+export default meta;
 
 const Template: StoryFn<typeof Coin> = (args) => {
 const Template: StoryFn<typeof Coin> = (args) => {
   return <Coin {...args} />;
 };
 
-export const CoinMight = {
+export const CoinMight: StoryObj<typeof Coin> = {
   render: Template,
 
   args: {

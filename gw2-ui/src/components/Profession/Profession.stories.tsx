@@ -1,4 +1,5 @@
-import type { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn, StoryObj } from '@storybook/react';
+import React from 'react';
 import { APILanguageProvider } from '../../i18n/';
 import Profession from './Profession';
 
@@ -8,14 +9,15 @@ const meta: Meta<typeof Profession> = {
   argTypes: {
     className: { control: false },
   },
-} as Meta<typeof Profession>;
+};
+export default meta;
 
 const Template: StoryFn<typeof Profession> = (args) => {
 const Template: StoryFn<typeof Profession> = (args) => {
   return <Profession {...args} />;
 };
 
-export const Firebrand = {
+export const Firebrand: StoryObj<typeof Profession> = {
   render: Template,
 
   args: {
@@ -23,7 +25,7 @@ export const Firebrand = {
   },
 };
 
-export const invalid = {
+export const invalid: StoryObj<typeof Profession> = {
   render: Template,
 
   args: {

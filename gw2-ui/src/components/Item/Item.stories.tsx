@@ -1,4 +1,5 @@
-import type { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn, StoryObj } from '@storybook/react';
+import React from 'react';
 import Item from './Item';
 import ITEM_STAT_NAMES from '../../builder/itemStatNames';
 
@@ -11,14 +12,15 @@ const meta: Meta<typeof Item> = {
     },
     className: { control: false },
   },
-} as Meta<typeof Item>;
+};
+export default meta;
 
 const Template: StoryFn<typeof Item> = (args) => {
 const Template: StoryFn<typeof Item> = (args) => {
   return <Item {...args} />;
 };
 
-export const Single = {
+export const Single: StoryObj<typeof Item> = {
   render: Template,
 
   args: {

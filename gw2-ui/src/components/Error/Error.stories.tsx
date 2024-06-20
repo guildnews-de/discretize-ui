@@ -1,4 +1,5 @@
-import type { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn, StoryObj } from '@storybook/react';
+import React from 'react';
 import { APILanguageProvider } from '../../i18n';
 import Error from './Error';
 
@@ -8,7 +9,8 @@ const meta: Meta<typeof Error> = {
   argTypes: {
     className: { control: false },
   },
-} as Meta<typeof Error>;
+};
+export default meta;
 
 const Template: StoryFn<typeof Error> = (args) => {
 const Template: StoryFn<typeof Error> = (args) => {
@@ -31,7 +33,7 @@ const ERROR_MESSAGES = {
   500: `Quaggan's network waddles slower than a centaur *pohooo*`,
 };
 
-export const NotFound = {
+export const NotFound: StoryObj<typeof Error> = {
   render: Template,
 
   args: {
@@ -41,7 +43,7 @@ export const NotFound = {
   },
 };
 
-export const NetworkError = {
+export const NetworkError: StoryObj<typeof Error> = {
   render: Template,
 
   args: {

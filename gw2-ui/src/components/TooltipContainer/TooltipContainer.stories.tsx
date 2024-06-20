@@ -1,4 +1,5 @@
-import type { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn, StoryObj } from '@storybook/react';
+import React from 'react';
 import TooltipContainer from './TooltipContainer';
 
 const meta: Meta<typeof TooltipContainer> = {
@@ -7,7 +8,8 @@ const meta: Meta<typeof TooltipContainer> = {
   argTypes: {
     className: { control: false },
   },
-} as Meta<typeof TooltipContainer>;
+};
+export default meta;
 
 const Template: StoryFn<typeof TooltipContainer> = (args) => {
 const Template: StoryFn<typeof TooltipContainer> = (args) => {
@@ -26,6 +28,6 @@ const Template: StoryFn<typeof TooltipContainer> = (args) => {
   );
 };
 
-export const Simple = {
+export const Simple: StoryObj<typeof TooltipContainer> = {
   render: Template,
 };
