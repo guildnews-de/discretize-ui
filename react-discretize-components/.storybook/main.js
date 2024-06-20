@@ -1,10 +1,16 @@
-import path from 'node:path';
+import { dirname, join } from 'node:path';
 
-export default {
+const path = require('path');
+module.exports = {
   stories: ['../src/**/*.stories.tsx'],
-  addons: ['@storybook/addon-webpack5-compiler-babel'],
+  addons: [
+    getAbsolutePath('@storybook/addon-actions'),
+    getAbsolutePath('@storybook/addon-essentials'),
+    getAbsolutePath('storybook-css-modules-preset'),
+    '@storybook/addon-webpack5-compiler-babel',
+  ],
   framework: {
-    name: '@storybook/react-webpack5',
+    name: getAbsolutePath('@storybook/react-webpack5'),
     options: {},
   },
   webpackFinal: async (config, { configType }) => {
@@ -20,7 +26,8 @@ export default {
     return config;
   },
   docs: {},
-  typescript: {
-    reactDocgen: 'react-docgen-typescript',
-  },
 };
+
+function getAbsolutePath(value) {
+  return dirname(require.resolve(join(value, 'package.json')));
+}

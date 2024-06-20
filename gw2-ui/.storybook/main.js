@@ -1,12 +1,13 @@
-export default {
+module.exports = {
   stories: ['../src/**/*.stories.tsx'],
-  addons: ['@storybook/addon-webpack5-compiler-babel'],
-  framework: {
-    name: '@storybook/react-webpack5',
-    options: {},
-  },
-  docs: {},
-  typescript: {
-    reactDocgen: 'react-docgen-typescript',
-  },
+  addons: [
+    '@storybook/addon-actions',
+    '@storybook/addon-essentials',
+    'storybook-css-modules-preset',
+  ],
+  framework: '@storybook/react',
 };
+
+function getAbsolutePath(value) {
+  return dirname(require.resolve(join(value, 'package.json')));
+}
