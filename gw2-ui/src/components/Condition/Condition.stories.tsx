@@ -1,4 +1,4 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import Condition from './Condition';
 
 const meta: Meta<typeof Condition> = {
@@ -7,14 +7,14 @@ const meta: Meta<typeof Condition> = {
   argTypes: {
     className: { control: false },
   },
-};
-export default meta;
+} as Meta<typeof Condition>;
 
+const Template: StoryFn<typeof Condition> = (args) => {
 const Template: StoryFn<typeof Condition> = (args) => {
   return <Condition {...args} />;
 };
 
-export const Bleed: StoryObj<typeof Condition> = {
+export const Bleed = {
   render: Template,
 
   args: {

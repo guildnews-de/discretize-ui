@@ -1,4 +1,4 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import { APILanguageProvider } from '../../i18n/';
 import Skill from './Skill';
 
@@ -8,14 +8,14 @@ const meta: Meta<typeof Skill> = {
   argTypes: {
     className: { control: false },
   },
-};
-export default meta;
+} as Meta<typeof Skill>;
 
+const Template: StoryFn<typeof Skill> = (args) => {
 const Template: StoryFn<typeof Skill> = (args) => {
   return <Skill {...args} />;
 };
 
-export const LavaFont: StoryObj<typeof Skill> = {
+export const LavaFont = {
   render: Template,
 
   args: {

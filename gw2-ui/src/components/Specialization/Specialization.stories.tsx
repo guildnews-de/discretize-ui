@@ -1,4 +1,4 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import Specialization from './Specialization';
 
 const meta: Meta<typeof Specialization> = {
@@ -7,14 +7,14 @@ const meta: Meta<typeof Specialization> = {
   argTypes: {
     className: { control: false },
   },
-};
-export default meta;
+} as Meta<typeof Specialization>;
 
+const Template: StoryFn<typeof Specialization> = (args) => {
 const Template: StoryFn<typeof Specialization> = (args) => {
   return <Specialization {...args} />;
 };
 
-export const Simple: StoryObj<typeof Specialization> = {
+export const Simple = {
   render: Template,
 
   args: {

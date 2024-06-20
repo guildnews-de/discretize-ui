@@ -1,4 +1,4 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import MistlockInstability from './MistlockInstability';
 
 const meta: Meta<typeof MistlockInstability> = {
@@ -7,14 +7,14 @@ const meta: Meta<typeof MistlockInstability> = {
   argTypes: {
     className: { control: false },
   },
-};
-export default meta;
+} as Meta<typeof MistlockInstability>;
 
+const Template: StoryFn<typeof MistlockInstability> = (args) => {
 const Template: StoryFn<typeof MistlockInstability> = (args) => {
   return <MistlockInstability {...args} />;
 };
 
-export const Simple: StoryObj<typeof MistlockInstability> = {
+export const Simple = {
   render: Template,
 
   args: {

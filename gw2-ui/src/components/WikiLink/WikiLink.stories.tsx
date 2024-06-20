@@ -1,4 +1,4 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import WikiLink from './WikiLink';
 
 const meta: Meta<typeof WikiLink> = {
@@ -7,9 +7,9 @@ const meta: Meta<typeof WikiLink> = {
   argTypes: {
     className: { control: false },
   },
-};
-export default meta;
+} as Meta<typeof WikiLink>;
 
+const Template: StoryFn<typeof WikiLink> = (args) => {
 const Template: StoryFn<typeof WikiLink> = (args) => {
   return (
     <>
@@ -18,7 +18,7 @@ const Template: StoryFn<typeof WikiLink> = (args) => {
   );
 };
 
-export const BaneSignet: StoryObj<typeof WikiLink> = {
+export const BaneSignet = {
   render: Template,
 
   args: {

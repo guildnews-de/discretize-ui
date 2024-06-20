@@ -1,4 +1,4 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import TextDivider from './TextDivider';
 
 const meta: Meta<typeof TextDivider> = {
@@ -7,14 +7,14 @@ const meta: Meta<typeof TextDivider> = {
   argTypes: {
     className: { control: false },
   },
-};
-export default meta;
+} as Meta<typeof TextDivider>;
 
+const Template: StoryFn<typeof TextDivider> = (args) => {
 const Template: StoryFn<typeof TextDivider> = (args) => {
   return <TextDivider {...args} />;
 };
 
-export const Example: StoryObj<typeof TextDivider> = {
+export const Example = {
   render: Template,
 
   args: {

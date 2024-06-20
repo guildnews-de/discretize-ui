@@ -1,20 +1,20 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import Character from './Character';
 
 const meta: Meta<typeof Character> = {
   title: 'Character/Character',
   component: Character,
-  // argTypes: {
-  //   className: { control: false },
-  // },
-};
-export default meta;
+  argTypes: {
+    className: { control: false },
+  },
+} as Meta<typeof Character>;
 
+const Template: StoryFn<typeof Character> = (args) => {
 const Template: StoryFn<typeof Character> = (args) => {
   return <Character {...args} />;
 };
 
-export const Example: StoryObj<typeof Character> = {
+export const Example = {
   render: Template,
 
   args: {
@@ -22,46 +22,23 @@ export const Example: StoryObj<typeof Character> = {
       profession: 'Elementalist',
       specialization: 'Weaver',
       data: {
-        Power: 3860.1800000000003,
-        Toughness: 1000,
-        Vitality: 1297,
-        Precision: 2122,
-        Ferocity: 1760.74,
+        Armor: 2514,
+        Power: 3926,
+        Precision: 2384,
+        Toughness: 1243,
+        Vitality: 1235,
+        Ferocity: 1556,
         'Condition Damage': 750,
         Expertise: 0,
-        Concentration: 0,
-        'Agony Resistance': 0,
-        Armor: 2015,
-        Health: 14615,
-        'Critical Chance': 1.0342857142857143,
-        'Critical Damage': 2.673826666666667,
+        Concentration: 243,
         'Healing Power': 0,
-        'Condition Duration': 0,
-        'Boon Duration': 0,
+        'Agony Resistance': 162,
+        'Condition Duration': 0.456564,
+        'Boon Duration': 0.1628776,
+        'Critical Chance': 0.876767,
+        'Critical Damage': 2.5373333333333337,
+        Health: 13995,
       },
-    },
-    unbuffedAttributes: {
-      profession: 'Elementalist',
-      specialization: 'Weaver',
-      data: {
-        Power: 3290,
-        Toughness: 1000,
-        Vitality: 1297,
-        Precision: 2122,
-        Ferocity: 1618,
-        'Condition Damage': 0,
-        Expertise: 0,
-        Concentration: 0,
-        'Agony Resistance': 0,
-        Armor: 2015,
-        Health: 14615,
-        'Critical Chance': 0.6342857142857142,
-        'Critical Damage': 2.578666666666667,
-        'Healing Power': 0,
-        'Condition Duration': 0,
-        'Boon Duration': 0,
-      },
-      info: 'Simulated unbuffed attributes are not exact and may not match ingame hero panel! For example, soulbeast\'s "with axe" and "with torch/dagger" buffs are both included, simulating a scenario which doesn\'t occur in either weapon set on some builds. Use with caution.',
     },
     armor: {
       helmAffix: 'Berserker',
@@ -137,8 +114,6 @@ export const Example: StoryObj<typeof Character> = {
         { gw2id: 14407, type: 'Skill' },
         { gw2id: 14405, type: 'Skill' },
         { gw2id: 14404, type: 'Skill' },
-        { id: 'reinforced-armor', type: 'CommonEffect' },
-        { id: 'jade-bot', gw2id: 96613, type: 'Item' },
       ],
     },
     skills: {

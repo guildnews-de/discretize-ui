@@ -1,4 +1,4 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import Attribute from './Attribute';
 
 const meta: Meta<typeof Attribute> = {
@@ -7,14 +7,14 @@ const meta: Meta<typeof Attribute> = {
   argTypes: {
     className: { control: false },
   },
-};
-export default meta;
+} as Meta<typeof Attribute>;
 
+const Template: StoryFn<typeof Attribute> = (args) => {
 const Template: StoryFn<typeof Attribute> = (args) => {
   return <Attribute {...args} />;
 };
 
-export const BoonDuration: StoryObj<typeof Attribute> = {
+export const BoonDuration = {
   render: Template,
 
   args: {

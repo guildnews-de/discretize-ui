@@ -1,4 +1,4 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import { APILanguageProvider } from '../../i18n';
 import Race from './Race';
 
@@ -8,14 +8,14 @@ const meta: Meta<typeof Race> = {
   argTypes: {
     className: { control: false },
   },
-};
-export default meta;
+} as Meta<typeof Race>;
 
+const Template: StoryFn<typeof Race> = (args) => {
 const Template: StoryFn<typeof Race> = (args) => {
   return <Race {...args} />;
 };
 
-export const Simple: StoryObj<typeof Race> = {
+export const Simple = {
   render: Template,
 
   args: {

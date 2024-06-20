@@ -1,4 +1,4 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import AssumedBuffs from './AssumedBuffs';
 
 const meta: Meta<typeof AssumedBuffs> = {
@@ -7,14 +7,14 @@ const meta: Meta<typeof AssumedBuffs> = {
   argTypes: {
     className: { control: false },
   },
-};
-export default meta;
+} as Meta<typeof AssumedBuffs>;
 
+const Template: StoryFn<typeof AssumedBuffs> = (args) => {
 const Template: StoryFn<typeof AssumedBuffs> = (args) => {
   return <AssumedBuffs {...args} />;
 };
 
-export const Example: StoryObj<typeof AssumedBuffs> = {
+export const Example = {
   render: Template,
 
   args: {
@@ -31,7 +31,6 @@ export const Example: StoryObj<typeof AssumedBuffs> = {
         type: 'Item',
       },
       { gw2id: 96613, type: 'Item' },
-      { id: 'Mist Attunement 3', type: 'Augmentation' },
     ],
   },
 };

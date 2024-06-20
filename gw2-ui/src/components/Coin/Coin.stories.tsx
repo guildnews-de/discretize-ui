@@ -1,4 +1,4 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import Coin from './Coin';
 
 const meta: Meta<typeof Coin> = {
@@ -7,14 +7,14 @@ const meta: Meta<typeof Coin> = {
   argTypes: {
     className: { control: false },
   },
-};
-export default meta;
+} as Meta<typeof Coin>;
 
+const Template: StoryFn<typeof Coin> = (args) => {
 const Template: StoryFn<typeof Coin> = (args) => {
   return <Coin {...args} />;
 };
 
-export const CoinMight: StoryObj<typeof Coin> = {
+export const CoinMight = {
   render: Template,
 
   args: {

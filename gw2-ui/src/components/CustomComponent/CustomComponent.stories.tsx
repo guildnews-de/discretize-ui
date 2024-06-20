@@ -1,4 +1,4 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import CustomComponent from './CustomComponent';
 
 const meta: Meta<typeof CustomComponent> = {
@@ -10,14 +10,13 @@ const meta: Meta<typeof CustomComponent> = {
       control: { type: 'text' },
     },
   },
-};
-export default meta;
+} as Meta<typeof CustomComponent>;
 
 const Template: StoryFn<typeof CustomComponent> = (args) => {
   return <CustomComponent {...args} />;
 };
 
-export const Single: StoryObj<typeof CustomComponent> = {
+export const Single = {
   render: Template,
 
   args: {

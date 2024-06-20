@@ -1,4 +1,4 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import { APILanguageProvider } from '../../i18n';
 import CommonEffect from './CommonEffect';
 
@@ -8,14 +8,14 @@ const meta: Meta<typeof CommonEffect> = {
   argTypes: {
     className: { control: false },
   },
-};
-export default meta;
+} as Meta<typeof CommonEffect>;
 
+const Template: StoryFn<typeof CommonEffect> = (args) => {
 const Template: StoryFn<typeof CommonEffect> = (args) => {
   return <CommonEffect {...args} />;
 };
 
-export const Simple: StoryObj<typeof CommonEffect> = {
+export const Simple = {
   render: Template,
 
   args: {

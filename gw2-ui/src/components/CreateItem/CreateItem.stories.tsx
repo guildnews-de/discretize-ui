@@ -1,4 +1,4 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import ITEM_ARMOR_WEIGHTS from '../../builder/itemArmorWeights';
 import ITEM_RARITIES from '../../builder/itemRarities';
 import ITEM_STAT_NAMES from '../../builder/itemStatNames';
@@ -30,14 +30,14 @@ const meta: Meta<typeof CreateItem> = {
       control: { type: 'text' },
     },
   },
-};
-export default meta;
+} as Meta<typeof CreateItem>;
 
+const Template: StoryFn<typeof CreateItem> = (args) => {
 const Template: StoryFn<typeof CreateItem> = (args) => {
   return <CreateItem {...args} />;
 };
 
-export const Single: StoryObj<typeof CreateItem> = {
+export const Single = {
   render: Template,
 
   args: {

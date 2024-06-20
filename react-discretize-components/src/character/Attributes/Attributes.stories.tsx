@@ -1,20 +1,20 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import Attributes from './Attributes';
 
 const meta: Meta<typeof Attributes> = {
   title: 'Character/Attributes',
   component: Attributes,
-  // argTypes: {
-  //   className: { control: false },
-  // },
-};
-export default meta;
+  argTypes: {
+    className: { control: false },
+  },
+} as Meta<typeof Attributes>;
 
+const Template: StoryFn<typeof Attributes> = (args) => {
 const Template: StoryFn<typeof Attributes> = (args) => {
   return <Attributes {...args} />;
 };
 
-export const Example: StoryObj<typeof Attributes> = {
+export const Example = {
   render: Template,
 
   args: {

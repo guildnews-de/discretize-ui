@@ -1,5 +1,5 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
-import { type ComponentProps } from 'react';
+import type { Meta, StoryFn } from '@storybook/react';
+import { ComponentProps } from 'react';
 import Icon from './Icon';
 
 const meta: Meta<typeof Icon> = {
@@ -8,9 +8,9 @@ const meta: Meta<typeof Icon> = {
   argTypes: {
     className: { control: false },
   },
-};
-export default meta;
+} as Meta<typeof Icon>;
 
+const Template: StoryFn<typeof Icon> = (args: ComponentProps<typeof Icon>) => {
 const Template: StoryFn<typeof Icon> = (args: ComponentProps<typeof Icon>) => {
   return (
     <>
@@ -19,7 +19,7 @@ const Template: StoryFn<typeof Icon> = (args: ComponentProps<typeof Icon>) => {
   );
 };
 
-export const Simple: StoryObj<typeof Icon> = {
+export const Simple = {
   render: Template,
 
   args: {

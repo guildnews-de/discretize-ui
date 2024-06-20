@@ -1,12 +1,12 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import Spinner from './Spinner';
 
 const meta: Meta<typeof Spinner> = {
   title: 'Helper Components/Spinner',
   component: Spinner,
-};
-export default meta;
+} as Meta<typeof Spinner>;
 
+const Template: StoryFn<typeof Spinner> = (args) => {
 const Template: StoryFn<typeof Spinner> = (args) => {
   return (
     <>
@@ -16,6 +16,6 @@ const Template: StoryFn<typeof Spinner> = (args) => {
   );
 };
 
-export const Simple: StoryObj<typeof Spinner> = {
+export const Simple = {
   render: Template,
 };

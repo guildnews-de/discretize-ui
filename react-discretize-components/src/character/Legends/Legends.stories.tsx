@@ -1,4 +1,4 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import Legends from './Legends';
 
 const meta: Meta<typeof Legends> = {
@@ -7,14 +7,14 @@ const meta: Meta<typeof Legends> = {
   argTypes: {
     className: { control: false },
   },
-};
-export default meta;
+} as Meta<typeof Legends>;
 
+const Template: StoryFn<typeof Legends> = (args) => {
 const Template: StoryFn<typeof Legends> = (args) => {
   return <Legends {...args} />;
 };
 
-export const Example: StoryObj<typeof Legends> = {
+export const Example = {
   render: Template,
 
   args: {

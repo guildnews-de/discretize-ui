@@ -1,15 +1,15 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import Tooltip from './Tooltip';
 
 const meta: Meta<typeof Tooltip> = {
   title: 'Helper Components/Tooltip',
   component: Tooltip,
-  // argTypes: {
-  //   className: { control: false },
-  // },
-};
-export default meta;
+  argTypes: {
+    className: { control: false },
+  },
+} as Meta<typeof Tooltip>;
 
+const Template: StoryFn<typeof Tooltip> = (args) => {
 const Template: StoryFn<typeof Tooltip> = (args) => {
   return (
     <>
@@ -53,6 +53,6 @@ const Template: StoryFn<typeof Tooltip> = (args) => {
   );
 };
 
-export const Simple: StoryObj<typeof Tooltip> = {
+export const Simple = {
   render: Template,
 };

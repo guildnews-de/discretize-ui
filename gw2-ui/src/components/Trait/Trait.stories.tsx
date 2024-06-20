@@ -1,5 +1,4 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
-import { Fragment } from 'react';
+import type { Meta, StoryFn } from '@storybook/react';
 import Trait from './Trait';
 
 const meta: Meta<typeof Trait> = {
@@ -8,14 +7,14 @@ const meta: Meta<typeof Trait> = {
   argTypes: {
     className: { control: false },
   },
-};
-export default meta;
+} as Meta<typeof Trait>;
 
+const Template: StoryFn<typeof Trait> = (args) => {
 const Template: StoryFn<typeof Trait> = (args) => {
   return <Trait {...args} />;
 };
 
-export const FreshAir: StoryObj<typeof Trait> = {
+export const FreshAir = {
   render: Template,
 
   args: {
@@ -23,7 +22,7 @@ export const FreshAir: StoryObj<typeof Trait> = {
   },
 };
 
-export const RecklessDodge: StoryObj<typeof Trait> = {
+export const RecklessDodge = {
   render: Template,
 
   args: {

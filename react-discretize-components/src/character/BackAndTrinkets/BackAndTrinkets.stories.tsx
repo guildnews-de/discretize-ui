@@ -1,20 +1,20 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import BackAndTrinkets from './BackAndTrinkets';
 
 const meta: Meta<typeof BackAndTrinkets> = {
   title: 'Character/BackAndTrinkets',
   component: BackAndTrinkets,
-  // argTypes: {
-  //   className: { control: false },
-  // },
-};
-export default meta;
+  argTypes: {
+    className: { control: false },
+  },
+} as Meta<typeof BackAndTrinkets>;
 
+const Template: StoryFn<typeof BackAndTrinkets> = (args) => {
 const Template: StoryFn<typeof BackAndTrinkets> = (args) => {
   return <BackAndTrinkets {...args} />;
 };
 
-export const Example: StoryObj<typeof BackAndTrinkets> = {
+export const Example = {
   render: Template,
 
   args: {
@@ -43,7 +43,7 @@ export const Example: StoryObj<typeof BackAndTrinkets> = {
   },
 };
 
-export const NoIds: StoryObj<typeof BackAndTrinkets> = {
+export const NoIds = {
   render: Template,
 
   args: {

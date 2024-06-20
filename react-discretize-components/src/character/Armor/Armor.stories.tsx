@@ -1,20 +1,20 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import Armor from './Armor';
 
 const meta: Meta<typeof Armor> = {
   title: 'Character/Armor',
   component: Armor,
-  // argTypes: {
-  //   className: { control: false },
-  // },
-};
-export default meta;
+  argTypes: {
+    className: { control: false },
+  },
+} as Meta<typeof Armor>;
 
+const Template: StoryFn<typeof Armor> = (args) => {
 const Template: StoryFn<typeof Armor> = (args) => {
   return <Armor {...args} />;
 };
 
-export const Example: StoryObj<typeof Armor> = {
+export const Example = {
   render: Template,
 
   args: {
@@ -45,7 +45,7 @@ export const Example: StoryObj<typeof Armor> = {
   },
 };
 
-export const NoIds: StoryObj<typeof Armor> = {
+export const NoIds = {
   render: Template,
 
   args: {

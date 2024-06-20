@@ -1,4 +1,4 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react';
 import Aura from './Aura';
 
 const meta: Meta<typeof Aura> = {
@@ -7,14 +7,14 @@ const meta: Meta<typeof Aura> = {
   argTypes: {
     className: { control: false },
   },
-};
-export default meta;
+} as Meta<typeof Aura>;
 
+const Template: StoryFn<typeof Aura> = (args) => {
 const Template: StoryFn<typeof Aura> = (args) => {
   return <Aura {...args} />;
 };
 
-export const Simple: StoryObj<typeof Aura> = {
+export const Simple = {
   render: Template,
 
   args: {
