@@ -5,7 +5,14 @@ module.exports = {
     '@storybook/addon-essentials',
     'storybook-css-modules-preset',
   ],
-  framework: '@storybook/react',
+  framework: {
+    name: getAbsolutePath('@storybook/react-webpack5'),
+    options: {},
+  },
+  docs: {},
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+  },
 };
 
 function getAbsolutePath(value) {
