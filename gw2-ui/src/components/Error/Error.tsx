@@ -27,6 +27,7 @@ export interface ErrorProps {
   className?: string;
   style?: CSSProperties;
   iconProps?: IconProps;
+  customLang?: string;
 }
 
 const Error = ({
@@ -42,8 +43,9 @@ const Error = ({
   className,
   style,
   iconProps,
+  customLang,
 }: ErrorProps): ReactElement => {
-  const language = useAPILanguage();
+  const language = useAPILanguage(customLang);
   const errorIconClass = code === 404 ? css.imageError404 : css.imageError500;
 
   function getMessage(raw: ErrorStrings): string {

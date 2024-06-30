@@ -26,6 +26,7 @@ export interface AttributeProps {
   inline?: boolean;
   style?: CSSProperties;
   className?: string;
+  customLang?: string;
 }
 
 const Attribute = ({
@@ -38,8 +39,9 @@ const Attribute = ({
   inline,
   style,
   className,
+  customLang,
 }: AttributeProps): ReactElement => {
-  const language = useAPILanguage();
+  const language = useAPILanguage(customLang);
 
   if (!name || !TRANSLATIONS_ATTRIBUTES[name]) {
     return (

@@ -7,6 +7,7 @@ import TraitInternal, { TraitInternalProps } from './TraitInternal';
 
 export interface TraitProps extends Omit<TraitInternalProps, 'data'> {
   id: number;
+  customLang?: string;
 }
 
 const TRAIT_ERROR_NAMES = {
@@ -20,7 +21,7 @@ const TRAIT_ERROR_MESSAGES = {
 };
 
 const Trait = (props: TraitProps): ReactElement => {
-  const trait = useTrait(props.id);
+  const trait = useTrait(props.id, props.customLang);
 
   if (trait.loading) {
     return <IconWithText {...props} loading />;

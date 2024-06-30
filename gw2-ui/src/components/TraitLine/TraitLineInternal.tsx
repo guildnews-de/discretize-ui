@@ -47,6 +47,7 @@ export interface TraitLineProps {
   onSelect?: (v: { tier: number; id: number; index: number }) => void;
   style?: CSSProperties;
   className?: string;
+  customLang?: string;
 }
 
 const TraitLineInternal = (props: TraitLineProps): ReactElement => {
@@ -61,6 +62,7 @@ const TraitLineInternal = (props: TraitLineProps): ReactElement => {
     className,
     dataSpecialization,
     dataTraits,
+    customLang,
   } = props;
 
   const [uncontrolledSelected, setUncontrolledSelected] =
@@ -92,6 +94,7 @@ const TraitLineInternal = (props: TraitLineProps): ReactElement => {
       inline: false,
       disableText: true,
       className: css.minorTrait,
+      customLang,
     };
     if (!dataTraits) {
       return <Trait {...sharedProps} id={minorTraitId} key={minorTraitId} />;
@@ -125,6 +128,7 @@ const TraitLineInternal = (props: TraitLineProps): ReactElement => {
         css.majorTrait,
         !isSelected && (controlled || selectable) && css.majorTraitAdditional,
       ),
+      customLang,
       ...(!isSelected &&
         (controlled || selectable) && {
           onClick: (event: React.MouseEvent<HTMLDivElement>) => {

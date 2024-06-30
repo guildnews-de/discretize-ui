@@ -17,11 +17,12 @@ export interface AuraProps {
   className?: string;
   style?: CSSProperties;
   iconProps?: IconProps;
+  customLang?: string;
 }
 
 const Aura = (props: AuraProps): ReactElement => {
-  const { name } = props;
-  const language = useAPILanguage();
+  const { name, customLang } = props;
+  const language = useAPILanguage(customLang);
 
   const translation = translate(TRANSLATIONS_AURAS, name, language);
   const description = translate(TRANSLATIONS_AURA_DESCRIPTIONS, name, language);

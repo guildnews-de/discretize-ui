@@ -17,6 +17,7 @@ export interface CommonEffectProps {
   disableIcon?: boolean;
   className?: string;
   style?: CSSProperties;
+  customLang?: string;
 }
 
 const CommonEffect = ({
@@ -27,14 +28,16 @@ const CommonEffect = ({
   disableIcon,
   className,
   style,
+  customLang,
 }: CommonEffectProps): ReactElement => {
   const name =
     propsName === 'Mistlock Singularity' ? 'Rigorous Certainty' : propsName;
 
-  const nameTranslated = useTranslation(COMMON_EFFECTS, name);
+  const nameTranslated = useTranslation(COMMON_EFFECTS, name, customLang);
   const descriptionTranslated = useTranslation(
     COMMON_EFFECTS_DESCRIPTIONS,
     name,
+    customLang,
   );
 
   return (

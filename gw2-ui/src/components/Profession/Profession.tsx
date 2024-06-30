@@ -24,6 +24,7 @@ export interface ProfessionProps {
   style?: CSSProperties;
   className?: string;
   iconProps?: IconProps;
+  customLang?: string;
 }
 
 const Profession = ({
@@ -37,8 +38,9 @@ const Profession = ({
   style,
   className,
   iconProps,
+  customLang,
 }: ProfessionProps): ReactElement => {
-  const language = useAPILanguage();
+  const language = useAPILanguage(customLang);
 
   let profession: ProfessionTypes | undefined;
   const specialization = professionOrSpecName;

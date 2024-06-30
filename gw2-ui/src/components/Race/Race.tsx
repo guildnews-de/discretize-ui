@@ -24,6 +24,7 @@ export interface RaceProps {
   className?: string;
   style?: CSSProperties;
   iconProps?: IconProps;
+  customLang?: string;
 }
 
 const Race = ({
@@ -39,8 +40,9 @@ const Race = ({
   className,
   style,
   iconProps,
+  customLang,
 }: RaceProps): ReactElement => {
-  const language = useAPILanguage();
+  const language = useAPILanguage(customLang);
 
   if (!name || !races.includes(name)) {
     return (

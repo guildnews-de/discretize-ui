@@ -19,16 +19,19 @@ export interface ControlEffectProps {
   className?: string;
   style?: CSSProperties;
   iconProps?: IconProps;
+  customLang?: string;
 }
 
 const ControlEffect = ({
   name,
+  customLang,
   ...props
 }: ControlEffectProps): ReactElement => {
-  const nameTranslated = useTranslation(CONTROL_EFFECTS, name);
+  const nameTranslated = useTranslation(CONTROL_EFFECTS, name, customLang);
   const descriptionTranslated = useTranslation(
     CONTROL_EFFECTS_DESCRIPTIONS,
     name,
+    customLang,
   );
 
   return (

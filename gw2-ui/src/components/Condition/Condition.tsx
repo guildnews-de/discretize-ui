@@ -17,6 +17,7 @@ export interface ConditionProps {
   className?: string;
   style?: CSSProperties;
   iconProps?: IconProps;
+  customLang?: string;
 }
 
 const Condition = ({
@@ -29,9 +30,14 @@ const Condition = ({
   className,
   style,
   iconProps,
+  customLang,
 }: ConditionProps): ReactElement => {
-  const nameTranslated = useTranslation(CONDITIONS, name);
-  const descriptionTranslated = useTranslation(CONDITIONS_DESCRIPTIONS, name);
+  const nameTranslated = useTranslation(CONDITIONS, name, customLang);
+  const descriptionTranslated = useTranslation(
+    CONDITIONS_DESCRIPTIONS,
+    name,
+    customLang,
+  );
 
   return (
     <Effect

@@ -18,11 +18,12 @@ export interface BoonProps {
   className?: string;
   style?: CSSProperties;
   iconProps?: IconProps;
+  customLang?: string;
 }
 
 const Boon = (props: BoonProps): ReactElement => {
-  const { name, count = 1, iconProps } = props;
-  const language = useAPILanguage();
+  const { name, count = 1, iconProps, customLang } = props;
+  const language = useAPILanguage(customLang);
 
   const translation = translate(TRANSLATIONS_BOONS, name, language);
   const description = translate(TRANSLATIONS_BOON_DESCRIPTIONS, name, language);

@@ -15,11 +15,12 @@ export interface AugmentationProps {
   disableIcon?: boolean;
   className?: string;
   style?: CSSProperties;
+  customLang?: string;
 }
 
 const Augmentation = (props: AugmentationProps): ReactElement => {
-  const { name } = props;
-  const language = useAPILanguage();
+  const { name, customLang } = props;
+  const language = useAPILanguage(customLang);
 
   const translation = translate(TRANSLATIONS_AUGMENTATIONS, name, language);
   const description = translate(

@@ -18,6 +18,7 @@ export interface MistlockInstabilityProps {
   disableIcon?: boolean;
   className?: string;
   style?: CSSProperties;
+  customLang?: string;
 }
 
 const MistlockInstability = ({
@@ -28,16 +29,23 @@ const MistlockInstability = ({
   disableIcon,
   className,
   style,
+  customLang,
 }: MistlockInstabilityProps): ReactElement => {
-  const nameTranslated = useTranslation(MISTLOCK_INSTABILITIES, name);
+  const nameTranslated = useTranslation(
+    MISTLOCK_INSTABILITIES,
+    name,
+    customLang,
+  );
   const descriptionTranslated = useTranslation(
     MISTLOCK_INSTABILITIES_DESCRIPTIONS,
     name,
+    customLang,
   );
 
   const mistlockTranslated = useTranslation(
     MISTLOCK_INSTABILTY_CONTROL,
     'Mistlock Instability',
+    customLang,
   );
 
   return (
