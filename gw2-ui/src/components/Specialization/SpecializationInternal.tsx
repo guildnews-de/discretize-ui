@@ -4,7 +4,7 @@ import GW2ApiSpecialization from '../../gw2api/types/specialization/specializati
 import IconWithText from '../IconWithText/IconWithText';
 import professioncss from '../Profession/professions.module.css';
 import Tooltip from '../Tooltip/Tooltip';
-import WikiLink from '../WikiLink/WikiLink';
+import WikiLink, { WikiLinkProps } from '../WikiLink/WikiLink';
 import SpecializationTooltip from './SpecializationTooltip';
 import { IconProps } from '../Icon/Icon';
 
@@ -17,7 +17,8 @@ export interface SpecializationInternalProps {
   inline?: boolean;
   style?: CSSProperties;
   className?: string;
-  iconProps?: IconProps;
+  iconProps?: Partial<IconProps>;
+  wikiLinkProps?: Partial<WikiLinkProps>;
 }
 
 const SpecializationInternal = (
@@ -33,6 +34,7 @@ const SpecializationInternal = (
     style,
     className,
     iconProps,
+    wikiLinkProps,
   } = props;
   const { name, icon, profession } = data;
 
@@ -47,6 +49,7 @@ const SpecializationInternal = (
             <WikiLink
               to={name}
               text={text}
+              {...wikiLinkProps}
               className={clsx(
                 profession && professioncss[`coloredProfession${profession}`],
               )}

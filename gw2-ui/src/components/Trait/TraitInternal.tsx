@@ -22,11 +22,11 @@ export interface TraitInternalProps {
   disableTooltip?: boolean;
   inline?: boolean;
   tooltipProps?: TooltipProps;
-  wikiLinkProps?: WikiLinkProps;
+  wikiLinkProps?: Partial<WikiLinkProps>;
   inactive?: boolean;
   style?: CSSProperties;
   className?: string;
-  iconProps?: IconProps;
+  iconProps?: Partial<IconProps>;
   onClick?: MouseEventHandler<HTMLSpanElement>;
 }
 

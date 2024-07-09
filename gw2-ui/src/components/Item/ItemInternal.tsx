@@ -28,11 +28,11 @@ export interface ItemInternalProps {
   disableTooltip?: boolean;
   inline?: boolean;
   tooltipProps?: TooltipProps;
-  wikiLinkProps?: WikiLinkProps;
+  wikiLinkProps?: Partial<WikiLinkProps>;
   upgrades?: ItemUpgrades;
   style?: CSSProperties;
   className?: string;
-  iconProps?: IconProps;
+  iconProps?: Partial<IconProps>;
 }
 
 const ItemInternal = (props: ItemInternalProps): ReactElement => {

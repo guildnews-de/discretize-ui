@@ -23,14 +23,9 @@ export interface ConditionProps {
 const Condition = ({
   name,
   count = 1,
-  disableTooltip,
-  disableText,
-  disableLink,
-  disableIcon,
-  className,
-  style,
   iconProps,
   customLang,
+  ...props
 }: ConditionProps): ReactElement => {
   const nameTranslated = useTranslation(CONDITIONS, name, customLang);
   const descriptionTranslated = useTranslation(
@@ -46,12 +41,7 @@ const Condition = ({
       displayName={nameTranslated}
       description={descriptionTranslated}
       iconProps={{ applyCount: count, ...iconProps }}
-      disableTooltip={disableTooltip}
-      disableText={disableText}
-      disableLink={disableLink}
-      disableIcon={disableIcon}
-      className={className}
-      style={style}
+      {...props}
     />
   );
 };

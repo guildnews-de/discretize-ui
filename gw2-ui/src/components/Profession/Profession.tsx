@@ -7,7 +7,7 @@ import PROFESSIONS, {
 import professioncss from './professions.module.css';
 import Error from '../Error/Error';
 import IconWithText from '../IconWithText/IconWithText';
-import WikiLink from '../WikiLink/WikiLink';
+import WikiLink, { WikiLinkProps } from '../WikiLink/WikiLink';
 import css from './Profession.module.css';
 import { translate, useAPILanguage } from '../../i18n';
 import TRANSLATIONS_PROFESSIONS from '../../i18n/professions';
@@ -23,7 +23,8 @@ export interface ProfessionProps {
   inline?: boolean;
   style?: CSSProperties;
   className?: string;
-  iconProps?: IconProps;
+  iconProps?: Partial<IconProps>;
+  wikiLinkProps?: Partial<WikiLinkProps>;
   customLang?: string;
 }
 
@@ -38,6 +39,7 @@ const Profession = ({
   style,
   className,
   iconProps,
+  wikiLinkProps,
   customLang,
 }: ProfessionProps): ReactElement => {
   const language = useAPILanguage(customLang);
@@ -90,6 +92,7 @@ const Profession = ({
             className={clsx(
               profession && professioncss[`coloredProfession${profession}`],
             )}
+            {...wikiLinkProps}
           />
         )
       }
