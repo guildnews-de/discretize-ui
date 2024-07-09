@@ -7,8 +7,9 @@ import {
   CONTROL_EFFECTS,
   CONTROL_EFFECTS_DESCRIPTIONS,
 } from '../../i18n/controlEffects';
-import { useTranslation } from '../../i18n';
+import { useAPILanguage, useTranslation } from '../../i18n';
 import { IconProps } from '../Icon/Icon';
+import { WikiLinkProps } from '../WikiLink/WikiLink';
 
 export interface ControlEffectProps {
   name: ControlEffectTypes;
@@ -18,20 +19,23 @@ export interface ControlEffectProps {
   disableIcon?: boolean;
   className?: string;
   style?: CSSProperties;
-  iconProps?: IconProps;
+  iconProps?: Partial<IconProps>;
+  wikiLinkProps?: Partial<WikiLinkProps>;
   customLang?: string;
 }
 
 const ControlEffect = ({
   name,
+  wikiLinkProps,
   customLang,
   ...props
 }: ControlEffectProps): ReactElement => {
-  const nameTranslated = useTranslation(CONTROL_EFFECTS, name, customLang);
+  const language = useAPILanguage(customLang);
+  const nameTranslated = useTranslation(CONTROL_EFFECTS, name, language);
   const descriptionTranslated = useTranslation(
     CONTROL_EFFECTS_DESCRIPTIONS,
     name,
-    customLang,
+    language,
   );
 
   return (
@@ -41,6 +45,7 @@ const ControlEffect = ({
       name={name}
       displayName={nameTranslated}
       description={descriptionTranslated}
+      wikiLinkProps={{ lang: language, ...wikiLinkProps }}
     />
   );
 };

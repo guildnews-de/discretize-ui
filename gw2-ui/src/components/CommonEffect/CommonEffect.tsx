@@ -1,9 +1,11 @@
 import React, { CSSProperties, ReactElement } from 'react';
 
 import Effect from '../Effect/Effect';
+import { IconProps } from '../Icon/Icon';
+import { WikiLinkProps } from '../WikiLink/WikiLink';
 
 import { CommonEffectTypes } from '../../data/commonEffects';
-import { useTranslation } from '../../i18n/index';
+import { useAPILanguage, useTranslation } from '../../i18n/index';
 import {
   COMMON_EFFECTS,
   COMMON_EFFECTS_DESCRIPTIONS,
@@ -17,6 +19,8 @@ export interface CommonEffectProps {
   disableIcon?: boolean;
   className?: string;
   style?: CSSProperties;
+  iconProps?: Partial<IconProps>;
+  wikiLinkProps?: Partial<WikiLinkProps>;
   customLang?: string;
 }
 
@@ -26,18 +30,21 @@ const CommonEffect = ({
   disableText,
   disableLink,
   disableIcon,
+  wikiLinkProps,
   className,
   style,
+
   customLang,
 }: CommonEffectProps): ReactElement => {
+  const language = useAPILanguage(customLang);
   const name =
     propsName === 'Mistlock Singularity' ? 'Rigorous Certainty' : propsName;
 
-  const nameTranslated = useTranslation(COMMON_EFFECTS, name, customLang);
+  const nameTranslated = useTranslation(COMMON_EFFECTS, name, language);
   const descriptionTranslated = useTranslation(
     COMMON_EFFECTS_DESCRIPTIONS,
     name,
-    customLang,
+    language,
   );
 
   return (
@@ -52,6 +59,7 @@ const CommonEffect = ({
       disableIcon={disableIcon}
       className={className}
       style={style}
+      wikiLinkProps={{ lang: language, ...wikiLinkProps }}
     />
   );
 };

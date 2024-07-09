@@ -19,11 +19,11 @@ export interface RaceProps {
   disableText?: boolean;
   disableLink?: boolean;
   inline?: boolean;
-  wikiLinkProps?: WikiLinkProps;
+  wikiLinkProps?: Partial<WikiLinkProps>;
   errorProps?: ErrorProps;
   className?: string;
   style?: CSSProperties;
-  iconProps?: IconProps;
+  iconProps?: Partial<IconProps>;
   customLang?: string;
 }
 
@@ -75,6 +75,7 @@ const Race = ({
           <WikiLink
             to={name}
             text={text || translation}
+            lang={language}
             {...wikiLinkProps}
             className={clsx(
               wikiLinkProps?.className,

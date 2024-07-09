@@ -7,6 +7,7 @@ import IconWithText, { IconWithTextProps } from '../IconWithText/IconWithText';
 import professioncss from '../Profession/professions.module.css';
 import Tooltip, { TooltipProps } from '../Tooltip/Tooltip';
 import WikiLink, { WikiLinkProps } from '../WikiLink/WikiLink';
+import { IconProps } from '../Icon/Icon';
 
 export interface SkillInternalProps
   extends Omit<IconWithTextProps, 'icon' | 'text' | 'loading' | 'style'> {
@@ -15,7 +16,8 @@ export interface SkillInternalProps
   disableLink?: boolean;
   disableTooltip?: boolean;
   tooltipProps?: TooltipProps;
-  wikiLinkProps?: WikiLinkProps;
+  iconProps?: Partial<IconProps>;
+  wikiLinkProps?: Partial<WikiLinkProps>;
   style?: CSSProperties;
   className?: string;
 }
@@ -27,6 +29,7 @@ const SkillInternal = (props: SkillInternalProps): ReactElement => {
     disableLink,
     disableTooltip,
     tooltipProps,
+    iconProps,
     wikiLinkProps,
   } = props;
 
@@ -42,6 +45,7 @@ const SkillInternal = (props: SkillInternalProps): ReactElement => {
       <IconWithText
         {...props}
         icon={icon}
+        iconProps={iconProps}
         text={
           disableLink ? (
             text || name

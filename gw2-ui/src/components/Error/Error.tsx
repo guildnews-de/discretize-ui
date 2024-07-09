@@ -26,7 +26,7 @@ export interface ErrorProps {
   tooltipProps?: TooltipProps;
   className?: string;
   style?: CSSProperties;
-  iconProps?: IconProps;
+  iconProps?: Partial<IconProps>;
   customLang?: string;
 }
 

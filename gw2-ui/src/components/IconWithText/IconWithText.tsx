@@ -11,7 +11,7 @@ export interface IconWithTextProps {
   disableIcon?: boolean;
   disableText?: boolean;
   inline?: boolean;
-  iconProps?: IconProps;
+  iconProps?: Partial<IconProps>;
   textProps?: any;
   progressProps?: ProgressProps;
   loading?: boolean;

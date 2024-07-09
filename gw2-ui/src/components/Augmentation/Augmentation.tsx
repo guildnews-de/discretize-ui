@@ -36,6 +36,7 @@ const Augmentation = (props: AugmentationProps): ReactElement => {
       name={name}
       displayName={translation}
       description={description}
+      wikiLinkProps={{ lang: language }}
     />
   );
 };

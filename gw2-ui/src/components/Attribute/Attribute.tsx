@@ -82,6 +82,7 @@ const Attribute = ({
             <WikiLink
               to={name}
               text={text || translation}
+              lang={language}
               className={css.wikiLink}
             />
           )

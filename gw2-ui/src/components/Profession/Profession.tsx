@@ -92,6 +92,7 @@ const Profession = ({
             className={clsx(
               profession && professioncss[`coloredProfession${profession}`],
             )}
+            lang={language}
             {...wikiLinkProps}
           />
         )

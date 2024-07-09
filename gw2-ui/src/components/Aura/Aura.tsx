@@ -7,6 +7,7 @@ import {
   TRANSLATIONS_AURAS,
   TRANSLATIONS_AURA_DESCRIPTIONS,
 } from '../../i18n/auras';
+import { WikiLinkProps } from '../WikiLink/WikiLink';
 
 export interface AuraProps {
   name: AuraTypes;
@@ -16,12 +17,13 @@ export interface AuraProps {
   disableIcon?: boolean;
   className?: string;
   style?: CSSProperties;
-  iconProps?: IconProps;
+  iconProps?: Partial<IconProps>;
+  wikiLinkProps: Partial<WikiLinkProps>;
   customLang?: string;
 }
 
 const Aura = (props: AuraProps): ReactElement => {
-  const { name, customLang } = props;
+  const { name, customLang, wikiLinkProps } = props;
   const language = useAPILanguage(customLang);
 
   const translation = translate(TRANSLATIONS_AURAS, name, language);
@@ -34,6 +36,7 @@ const Aura = (props: AuraProps): ReactElement => {
       name={name}
       displayName={translation}
       description={description}
+      wikiLinkProps={{ lang: language, ...wikiLinkProps }}
     />
   );
 };

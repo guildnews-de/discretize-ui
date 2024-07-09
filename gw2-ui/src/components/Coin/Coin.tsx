@@ -16,7 +16,7 @@ export interface CoinProps {
   value: number;
   className?: string;
   style?: CSSProperties;
-  iconProps?: IconProps;
+  iconProps?: Partial<IconProps>;
 }
 
 const Coin = ({
