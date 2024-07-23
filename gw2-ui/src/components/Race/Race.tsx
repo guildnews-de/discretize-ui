@@ -9,6 +9,7 @@ import { capitalize } from '../../helpers/capitalize';
 import css from './Race.module.css';
 import { translate, useAPILanguage } from '../../i18n';
 import TRANSLATIONS_RACES from '../../i18n/races';
+import { IconProps } from '../Icon/Icon';
 
 export interface RaceProps {
   name: RacesTypes;
@@ -18,10 +19,12 @@ export interface RaceProps {
   disableText?: boolean;
   disableLink?: boolean;
   inline?: boolean;
-  wikiLinkProps?: WikiLinkProps;
+  wikiLinkProps?: Partial<WikiLinkProps>;
   errorProps?: ErrorProps;
   className?: string;
   style?: CSSProperties;
+  iconProps?: Partial<IconProps>;
+  customLang?: string;
 }
 
 const Race = ({
@@ -36,8 +39,10 @@ const Race = ({
   errorProps,
   className,
   style,
+  iconProps,
+  customLang,
 }: RaceProps): ReactElement => {
-  const language = useAPILanguage();
+  const language = useAPILanguage(customLang);
 
   if (!name || !races.includes(name)) {
     return (
@@ -70,6 +75,7 @@ const Race = ({
           <WikiLink
             to={name}
             text={text || translation}
+            lang={language}
             {...wikiLinkProps}
             className={clsx(
               wikiLinkProps?.className,
@@ -84,6 +90,7 @@ const Race = ({
       iconProps={{
         className: css[`imageRace${capitalize(name)}`],
         iconViaClassname: true,
+        ...iconProps,
       }}
       style={style}
       className={clsx(className, css[`color${capitalize(name)}`])}

@@ -6,6 +6,7 @@ import DetailsText from '../DetailsText/DetailsText';
 import IconWithText from '../IconWithText/IconWithText';
 import Tooltip, { TooltipProps } from '../Tooltip/Tooltip';
 import css from './Error.module.css';
+import { IconProps } from '../Icon/Icon';
 
 type ErrorCode = number;
 type ErrorString = string | ((id: number) => string);
@@ -25,6 +26,8 @@ export interface ErrorProps {
   tooltipProps?: TooltipProps;
   className?: string;
   style?: CSSProperties;
+  iconProps?: Partial<IconProps>;
+  customLang?: string;
 }
 
 const Error = ({
@@ -39,8 +42,10 @@ const Error = ({
   tooltipProps,
   className,
   style,
+  iconProps,
+  customLang,
 }: ErrorProps): ReactElement => {
-  const language = useAPILanguage();
+  const language = useAPILanguage(customLang);
   const errorIconClass = code === 404 ? css.imageError404 : css.imageError500;
 
   function getMessage(raw: ErrorStrings): string {
@@ -71,7 +76,11 @@ const Error = ({
       content={
         <>
           <DetailsHeader
-            iconProps={{ className: errorIconClass, iconViaClassname: true }}
+            iconProps={{
+              className: errorIconClass,
+              iconViaClassname: true,
+              ...iconProps,
+            }}
             titleClassName={css.errorColor}
           >
             {name}
@@ -87,7 +96,11 @@ const Error = ({
         disableIcon={disableIcon}
         disableText={disableText}
         inline={inline}
-        iconProps={{ className: errorIconClass, iconViaClassname: true }}
+        iconProps={{
+          className: errorIconClass,
+          iconViaClassname: true,
+          ...iconProps,
+        }}
         className={clsx(className, css.errorColor)}
         style={style}
       />

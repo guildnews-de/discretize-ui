@@ -20,10 +20,11 @@ const SPECIALIZATION_ERROR_MESSAGES = {
 export interface SpecializationProps
   extends Omit<SpecializationInternalProps, 'data'> {
   id: number;
+  customLang?: string;
 }
 
 const Specialization = (props: SpecializationProps): ReactElement => {
-  const specialization = useSpecialization(props.id);
+  const specialization = useSpecialization(props.id, props.customLang);
 
   if (specialization.loading) {
     return <IconWithText {...props} loading />;

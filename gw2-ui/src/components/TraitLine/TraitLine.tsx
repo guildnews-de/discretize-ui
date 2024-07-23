@@ -15,6 +15,7 @@ export interface TraitLineProps {
   onSelect?: (v: { tier: number; id: number; index: number }) => void;
   style?: CSSProperties;
   className?: string;
+  customLang?: string;
 }
 
 const TRAITLINE_ERROR_NAMES = {
@@ -29,7 +30,7 @@ const TRAITLINE_ERROR_MESSAGES = {
 };
 
 const TraitLine = (props: TraitLineProps): ReactElement => {
-  const specialization = useSpecialization(props.id);
+  const specialization = useSpecialization(props.id, props.customLang);
 
   if (specialization.loading) {
     return (

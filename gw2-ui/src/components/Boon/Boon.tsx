@@ -6,6 +6,8 @@ import {
   TRANSLATIONS_BOON_DESCRIPTIONS,
 } from '../../i18n/boons';
 import Effect from '../Effect/Effect';
+import { IconProps } from '../Icon/Icon';
+import { WikiLinkProps } from '../WikiLink/WikiLink';
 
 export interface BoonProps {
   name: BoonsTypes;
@@ -16,11 +18,20 @@ export interface BoonProps {
   disableIcon?: boolean;
   className?: string;
   style?: CSSProperties;
+  iconProps?: Partial<IconProps>;
+  wikiLinkProps?: Partial<WikiLinkProps>;
+  customLang?: string;
 }
 
-const Boon = (props: BoonProps): ReactElement => {
-  const { name, count = 1 } = props;
-  const language = useAPILanguage();
+const Boon = ({
+  name,
+  count = 1,
+  iconProps,
+  wikiLinkProps,
+  customLang,
+  ...props
+}: BoonProps): ReactElement => {
+  const language = useAPILanguage(customLang);
 
   const translation = translate(TRANSLATIONS_BOONS, name, language);
   const description = translate(TRANSLATIONS_BOON_DESCRIPTIONS, name, language);
@@ -32,7 +43,8 @@ const Boon = (props: BoonProps): ReactElement => {
       name={name}
       displayName={translation}
       description={description}
-      iconProps={{ applyCount: count }}
+      iconProps={{ applyCount: count, ...iconProps }}
+      wikiLinkProps={{ lang: language, ...wikiLinkProps }}
     />
   );
 };

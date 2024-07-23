@@ -7,10 +7,11 @@ import PROFESSIONS, {
 import professioncss from './professions.module.css';
 import Error from '../Error/Error';
 import IconWithText from '../IconWithText/IconWithText';
-import WikiLink from '../WikiLink/WikiLink';
+import WikiLink, { WikiLinkProps } from '../WikiLink/WikiLink';
 import css from './Profession.module.css';
 import { translate, useAPILanguage } from '../../i18n';
 import TRANSLATIONS_PROFESSIONS from '../../i18n/professions';
+import { IconProps } from '../Icon/Icon';
 
 export interface ProfessionProps {
   name: ProfessionTypes | EliteSpecTypes;
@@ -22,6 +23,9 @@ export interface ProfessionProps {
   inline?: boolean;
   style?: CSSProperties;
   className?: string;
+  iconProps?: Partial<IconProps>;
+  wikiLinkProps?: Partial<WikiLinkProps>;
+  customLang?: string;
 }
 
 const Profession = ({
@@ -34,8 +38,11 @@ const Profession = ({
   inline,
   style,
   className,
+  iconProps,
+  wikiLinkProps,
+  customLang,
 }: ProfessionProps): ReactElement => {
-  const language = useAPILanguage();
+  const language = useAPILanguage(customLang);
 
   let profession: ProfessionTypes | undefined;
   const specialization = professionOrSpecName;
@@ -85,6 +92,8 @@ const Profession = ({
             className={clsx(
               profession && professioncss[`coloredProfession${profession}`],
             )}
+            lang={language}
+            {...wikiLinkProps}
           />
         )
       }
@@ -94,6 +103,7 @@ const Profession = ({
       iconProps={{
         className: css[`imageProfession${specialization}`],
         iconViaClassname: true,
+        ...iconProps,
       }}
       style={style}
       className={clsx(

@@ -7,7 +7,9 @@ import {
   CONTROL_EFFECTS,
   CONTROL_EFFECTS_DESCRIPTIONS,
 } from '../../i18n/controlEffects';
-import { useTranslation } from '../../i18n';
+import { useAPILanguage, useTranslation } from '../../i18n';
+import { IconProps } from '../Icon/Icon';
+import { WikiLinkProps } from '../WikiLink/WikiLink';
 
 export interface ControlEffectProps {
   name: ControlEffectTypes;
@@ -17,35 +19,33 @@ export interface ControlEffectProps {
   disableIcon?: boolean;
   className?: string;
   style?: CSSProperties;
+  iconProps?: Partial<IconProps>;
+  wikiLinkProps?: Partial<WikiLinkProps>;
+  customLang?: string;
 }
 
 const ControlEffect = ({
   name,
-  disableTooltip,
-  disableText,
-  disableLink,
-  disableIcon,
-  className,
-  style,
+  wikiLinkProps,
+  customLang,
+  ...props
 }: ControlEffectProps): ReactElement => {
-  const nameTranslated = useTranslation(CONTROL_EFFECTS, name);
+  const language = useAPILanguage(customLang);
+  const nameTranslated = useTranslation(CONTROL_EFFECTS, name, language);
   const descriptionTranslated = useTranslation(
     CONTROL_EFFECTS_DESCRIPTIONS,
     name,
+    language,
   );
 
   return (
     <Effect
+      {...props}
       type="Control"
       name={name}
       displayName={nameTranslated}
       description={descriptionTranslated}
-      disableTooltip={disableTooltip}
-      disableText={disableText}
-      disableLink={disableLink}
-      disableIcon={disableIcon}
-      className={className}
-      style={style}
+      wikiLinkProps={{ lang: language, ...wikiLinkProps }}
     />
   );
 };

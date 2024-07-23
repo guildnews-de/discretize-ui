@@ -3,7 +3,7 @@ import * as React from 'react';
 export type APILanguage = 'de' | 'en' | 'es' | 'fr' | 'zh';
 export const API_LANGUAGES = ['de', 'en', 'es', 'fr', 'zh'];
 
-function isAPILanguage(l: string): l is APILanguage {
+export function isAPILanguage(l: string): l is APILanguage {
   return API_LANGUAGES.includes(l);
 }
 
@@ -25,8 +25,12 @@ const APILanguageContext = React.createContext<APILanguage>(
 
 export const APILanguageProvider = APILanguageContext.Provider;
 
-export function useAPILanguage() {
-  return React.useContext(APILanguageContext);
+export function useAPILanguage(lang?: string) {
+  if (lang && isAPILanguage(lang)) {
+    return lang;
+  } else {
+    return React.useContext(APILanguageContext);
+  }
 }
 
 export type Translation = Partial<Record<APILanguage, string>>;
@@ -46,8 +50,9 @@ export function translate<T extends string>(
 export function useTranslation<T extends string>(
   map: Record<T, Translation>,
   key: T,
+  cutomLang?: string,
 ): string {
-  const lang = useAPILanguage();
+  const lang = useAPILanguage(cutomLang);
 
   return translate(map, key, lang);
 }

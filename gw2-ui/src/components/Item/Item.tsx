@@ -8,6 +8,7 @@ import ItemInternal, { ItemInternalProps } from './ItemInternal';
 export interface ItemProps
   extends Omit<ItemInternalProps, 'dataItem' | 'dataUpgrades'> {
   id: number;
+  customLang?: string;
 }
 const SKILL_ERROR_NAMES = {
   404: 'Item Not Found',
@@ -32,6 +33,7 @@ const Item = (props: ItemProps): ReactElement => {
     upgrades,
     style,
     className,
+    customLang,
   } = props;
 
   if (!id) {
@@ -54,7 +56,7 @@ const Item = (props: ItemProps): ReactElement => {
       }
     }
   }
-  const items = useItems(ids);
+  const items = useItems(ids, customLang);
 
   if (items.loading) {
     const newProps = {
@@ -68,6 +70,7 @@ const Item = (props: ItemProps): ReactElement => {
       upgrades,
       style,
       className,
+      customLang,
     };
     return <IconWithText {...newProps} loading />;
   }

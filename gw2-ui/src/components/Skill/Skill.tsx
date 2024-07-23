@@ -6,6 +6,7 @@ import SkillInternal, { SkillInternalProps } from './SkillInternal';
 
 export interface SkillProps extends Omit<SkillInternalProps, 'data'> {
   id: number;
+  customLang?: string;
 }
 
 const SKILL_ERROR_NAMES = {
@@ -19,7 +20,7 @@ const SKILL_ERROR_MESSAGES = {
 };
 
 const Skill = (props: SkillProps): ReactElement => {
-  const skill = useSkill(props.id);
+  const skill = useSkill(props.id, props.customLang);
 
   if (skill.loading) {
     return <IconWithText {...props} loading />;

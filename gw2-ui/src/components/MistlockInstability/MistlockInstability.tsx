@@ -1,9 +1,11 @@
 import React, { CSSProperties, ReactElement } from 'react';
 
 import Effect from '../Effect/Effect';
+import { IconProps } from '../Icon/Icon';
+import { WikiLinkProps } from '../WikiLink/WikiLink';
 
 import { MistlockInstabilityTypes } from '../../data/mistlockInstabilities';
-import { useTranslation } from '../../i18n';
+import { useAPILanguage, useTranslation } from '../../i18n';
 import {
   MISTLOCK_INSTABILITIES,
   MISTLOCK_INSTABILITIES_DESCRIPTIONS,
@@ -18,6 +20,9 @@ export interface MistlockInstabilityProps {
   disableIcon?: boolean;
   className?: string;
   style?: CSSProperties;
+  iconProps?: Partial<IconProps>;
+  wikiLinkProps?: Partial<WikiLinkProps>;
+  customLang?: string;
 }
 
 const MistlockInstability = ({
@@ -28,16 +33,22 @@ const MistlockInstability = ({
   disableIcon,
   className,
   style,
+  iconProps,
+  wikiLinkProps,
+  customLang,
 }: MistlockInstabilityProps): ReactElement => {
-  const nameTranslated = useTranslation(MISTLOCK_INSTABILITIES, name);
+  const language = useAPILanguage(customLang);
+  const nameTranslated = useTranslation(MISTLOCK_INSTABILITIES, name, language);
   const descriptionTranslated = useTranslation(
     MISTLOCK_INSTABILITIES_DESCRIPTIONS,
     name,
+    language,
   );
 
   const mistlockTranslated = useTranslation(
     MISTLOCK_INSTABILTY_CONTROL,
     'Mistlock Instability',
+    language,
   );
 
   return (
@@ -51,6 +62,8 @@ const MistlockInstability = ({
       disableLink={disableLink}
       disableIcon={disableIcon}
       className={className}
+      iconProps={iconProps}
+      wikiLinkProps={{ lang: language, ...wikiLinkProps }}
       style={style}
     />
   );
