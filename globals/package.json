@@ -18,6 +18,11 @@
     "build": "node ../build.mjs",
     "prepublish": "pnpm build"
   },
+  "dependencies": {
+    "@mui/material": "^5.16.5",
+    "@mui/styles": "^5.16.5",
+    "tss-react": "^4.9.11"
+  },
   "devDependencies": {
     "@mui/material": "^6.5.0",
     "@mui/styles": "^6.4.8",
