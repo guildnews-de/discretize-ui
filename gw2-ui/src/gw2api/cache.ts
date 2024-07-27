@@ -228,6 +228,7 @@ export default class APICache<T extends { id: Id }> {
         '&lang=' +
         this.language;
       const res = await fetch(url, FETCH_OPTIONS);
+
       if (res.status === 404) {
         // 404 usually means that none of the passed ids are known, which is equivalent to an empty response
         response = [];
