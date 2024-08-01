@@ -4,9 +4,28 @@ updates:
     directory: /
     labels: []
     schedule:
-      interval: cron
-      cronjob: 0 17 5 * *
+      interval: monthly
+      time: '17:00'
     groups:
       github-actions:
         patterns:
           - '*'
+
+  - package-ecosystem: npm
+    directory: /
+    labels: []
+    schedule:
+      interval: monthly
+      time: '17:00'
+    allow:
+      - dependency-type: development
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
+    groups:
+      npm-dependencies:
+        patterns:
+          - '*'
+        update-types:
+          - minor
+          - patch
