@@ -4,17 +4,6 @@
   position: relative;
   z-index: 1;
 }
-.switches {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-}
-.unbuffedInfo {
-  position: absolute;
-  bottom: 1em;
-  right: 1em;
-  transform: scale(1.5);
-}
 .section {
   position: relative;
   background-color: var(--rdc-character-background-color);
