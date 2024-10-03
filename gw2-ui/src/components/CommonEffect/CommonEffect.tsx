@@ -1,10 +1,10 @@
-import React, { CSSProperties, ReactElement } from 'react';
+import React, { type CSSProperties, type ReactElement } from 'react';
 
 import Effect from '../Effect/Effect';
 import { IconProps } from '../Icon/Icon';
 import { WikiLinkProps } from '../WikiLink/WikiLink';
 
-import { CommonEffectTypes } from '../../data/commonEffects';
+import { type CommonEffectTypes } from '../../data/commonEffects';
 import { useAPILanguage, useTranslation } from '../../i18n/index';
 import {
   COMMON_EFFECTS,

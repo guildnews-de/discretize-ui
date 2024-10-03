@@ -1,10 +1,10 @@
-import React, { CSSProperties, ReactElement } from 'react';
+import React, { type CSSProperties, type ReactElement } from 'react';
 
 import Effect from '../Effect/Effect';
 import { IconProps } from '../Icon/Icon';
 import { WikiLinkProps } from '../WikiLink/WikiLink';
 
-import { MistlockInstabilityTypes } from '../../data/mistlockInstabilities';
+import { type MistlockInstabilityTypes } from '../../data/mistlockInstabilities';
 import { useAPILanguage, useTranslation } from '../../i18n';
 import {
   MISTLOCK_INSTABILITIES,

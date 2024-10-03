@@ -1,10 +1,10 @@
-import React, { CSSProperties, ReactElement } from 'react';
+import React, { type CSSProperties, type ReactElement } from 'react';
 
 import Effect from '../Effect/Effect';
 import { IconProps } from '../Icon/Icon';
 import { WikiLinkProps } from '../WikiLink/WikiLink';
 
-import { ConditionTypes } from '../../data/conditions';
+import { type ConditionTypes } from '../../data/conditions';
 import { useAPILanguage, useTranslation } from '../../i18n';
 import { CONDITIONS, CONDITIONS_DESCRIPTIONS } from '../../i18n/conditions';
 
