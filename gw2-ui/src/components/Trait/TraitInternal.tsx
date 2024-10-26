@@ -21,7 +21,7 @@ export interface TraitInternalProps {
   disableLink?: boolean;
   disableTooltip?: boolean;
   inline?: boolean;
-  tooltipProps?: TooltipProps;
+  tooltipProps?: Partial<TooltipProps>;
   wikiLinkProps?: Partial<WikiLinkProps>;
   inactive?: boolean;
   style?: CSSProperties;

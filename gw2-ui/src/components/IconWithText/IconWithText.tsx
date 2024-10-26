@@ -13,7 +13,7 @@ export interface IconWithTextProps {
   inline?: boolean;
   iconProps?: Partial<IconProps>;
   textProps?: any;
-  progressProps?: ProgressProps;
+  progressProps?: Partial<ProgressProps>;
   loading?: boolean;
   style?: CSSProperties;
   className?: string;

@@ -17,7 +17,7 @@ export interface SkillInternalProps
   text?: string;
   disableLink?: boolean;
   disableTooltip?: boolean;
-  tooltipProps?: TooltipProps;
+  tooltipProps?: Partial<TooltipProps>;
   iconProps?: Partial<IconProps>;
   wikiLinkProps?: Partial<WikiLinkProps>;
   style?: CSSProperties;

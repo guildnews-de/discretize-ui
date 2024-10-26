@@ -20,7 +20,7 @@ export interface RaceProps {
   disableLink?: boolean;
   inline?: boolean;
   wikiLinkProps?: Partial<WikiLinkProps>;
-  errorProps?: ErrorProps;
+  errorProps?: Partial<ErrorProps>;
   className?: string;
   style?: CSSProperties;
   iconProps?: Partial<IconProps>;
