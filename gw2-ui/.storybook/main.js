@@ -1,9 +1,9 @@
 module.exports = {
   stories: ['../src/**/*.stories.tsx'],
   addons: [
-    '@storybook/addon-actions',
-    '@storybook/addon-essentials',
-    'storybook-css-modules-preset',
+    getAbsolutePath('storybook-css-modules-preset'),
+    '@storybook/addon-webpack5-compiler-babel',
+    getAbsolutePath('@storybook/addon-docs'),
   ],
   framework: {
     name: getAbsolutePath('@storybook/react-webpack5'),
