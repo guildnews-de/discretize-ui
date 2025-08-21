@@ -1,5 +1,5 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
-import React from 'react';
+import React, { Fragment } from 'react';
 import Trait from './Trait';
 
 const meta: Meta<typeof Trait> = {
