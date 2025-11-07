@@ -18,7 +18,7 @@ export interface AuraProps {
   className?: string;
   style?: CSSProperties;
   iconProps?: Partial<IconProps>;
-  wikiLinkProps: Partial<WikiLinkProps>;
+  wikiLinkProps?: Partial<WikiLinkProps>;
   customLang?: string;
 }
 

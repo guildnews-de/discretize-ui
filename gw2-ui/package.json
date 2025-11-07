@@ -23,10 +23,10 @@
     "*.png",
     "*.jpg"
   ],
-  "files": [
-    "dist"
-  ],
-  "module": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./ts": "./src/index.ts"
+  },
   "types": "dist/index.d.ts",
   "scripts": {
     "dev": "pnpm storybook",
