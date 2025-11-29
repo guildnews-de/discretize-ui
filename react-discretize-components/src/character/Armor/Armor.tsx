@@ -2,6 +2,7 @@ import { type CreateItem, Item } from '@discretize/gw2-ui-new';
 import DynamicItem from '../../helpers/DynamicItem/DynamicItem';
 import firstUppercase from '../../helpers/firstUppercase';
 import classes from './Armor.module.css';
+import type { ComponentProps } from 'react';
 
 type ItemUpgrades = ComponentProps<typeof Item>['upgrades'];
 

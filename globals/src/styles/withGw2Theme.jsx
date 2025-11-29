@@ -41,7 +41,14 @@ const specializationAliases = {
   ritualist: 'necromancer',
 };
 
-export default (props) => (Component) =>
+/**
+ * @typedef {() => (Component: import('react').ReactNode)} ReactNode
+ * @typedef {() => (Component: import('react').FC)} ReactFC
+ * @typedef {{ profession: unknown, specialization: unknown, type: unknown} WithGw2ThemeProps }
+ */
+
+/** @type {(props: WithGw2ThemeProps) => (Component: ReactNode) => ReactFC} */
+const withGw2Theme = (props) => (Component) =>
   withTheme(({ theme, ...rest }) => {
     const { profession, specialization, type } = props || { ...rest };
 
@@ -76,3 +83,5 @@ export default (props) => (Component) =>
       <Component {...rest} />
     );
   });
+
+export default withGw2Theme;

@@ -1,5 +1,5 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
-import React from 'react';
+import { useState } from 'react';
 import TraitLine from './TraitLine';
 import Specialization from '../Specialization/Specialization';
 

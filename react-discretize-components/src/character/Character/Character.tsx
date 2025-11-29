@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type JSX, type ChangeEvent } from 'react';
 import classNames from 'classnames';
 import { type CSSProperties, type ReactNode } from 'react';
 import HelperIcon from '../../helpers/HelperIcon/HelperIcon';
@@ -8,19 +8,9 @@ import AssumedBuffs, {
   type AssumedBuffsProps,
 } from '../AssumedBuffs/AssumedBuffs';
 import Attributes, { type AttributesProps } from '../Attributes/Attributes';
-import Armor, { type ArmorProps } from '../Armor/Armor';
-import AssumedBuffs, {
-  type AssumedBuffsProps,
-} from '../AssumedBuffs/AssumedBuffs';
-import Attributes, { type AttributesProps } from '../Attributes/Attributes';
 import BackAndTrinkets, {
   type BackAndTrinketsProps,
-  type BackAndTrinketsProps,
 } from '../BackAndTrinkets/BackAndTrinkets';
-import Consumables, { type ConsumablesProps } from '../Consumables/Consumables';
-import Legends, { type LegendsProps } from '../Legends/Legends';
-import Skills, { type SkillsProps } from '../Skills/Skills';
-import Weapons, { type WeaponsProps } from '../Weapons/Weapons';
 import Consumables, { type ConsumablesProps } from '../Consumables/Consumables';
 import Legends, { type LegendsProps } from '../Legends/Legends';
 import Skills, { type SkillsProps } from '../Skills/Skills';

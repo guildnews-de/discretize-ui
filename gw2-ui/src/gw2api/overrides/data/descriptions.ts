@@ -95,16 +95,6 @@ export const food: Record<number, string> = {
   99785: `${wvwOnly}${peppercorn}${sousVideSteak}${ascended}`,
   99794: `${wvwOnly}${peppercorn}${oysterSoup}${ascended}`,
   99804: `${wvwOnly}${mint}${fruitSalad}${ascended}`,
-
-  97200: `${fish}${oysterSoup}${ascended}`,
-  97282: `${fish}${sousVideSteak}${ascended}`,
-  97472: `${fish}${fruitSalad}${ascended}`,
-  97592: `${fish}${curedMeatFlatbread}${ascended}`,
-  97826: `${fish}${truffleRavioli}${ascended}`,
-
-  99785: `${wvwOnly}${peppercorn}${sousVideSteak}${ascended}`,
-  99794: `${wvwOnly}${peppercorn}${oysterSoup}${ascended}`,
-  99804: `${wvwOnly}${mint}${fruitSalad}${ascended}`,
 };
 
 export const traits: Record<number, string> = {

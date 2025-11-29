@@ -8,7 +8,6 @@ import WikiLink from '../WikiLink/WikiLink';
 import Error from '../Error/Error';
 
 import { type AttributeTypes } from '../../data/attributes';
-import { type AttributeTypes } from '../../data/attributes';
 import {
   TRANSLATIONS_ATTRIBUTES,
   TRANSLATIONS_ATTRIBUTE_DESCRIPTIONS,
