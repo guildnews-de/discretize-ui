@@ -1,6 +1,6 @@
+import type { ReactElement } from 'react';
 import { Paper } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
-import React from 'react';
 
 declare module '@mui/material/styles/createPalette' {
   interface Palette {
@@ -243,7 +243,7 @@ export default createTheme(theme, {
     },
     MuiAutocomplete: {
       defaultProps: {
-        PaperComponent: ({ children }: { children: React.ReactElement }) => (
+        PaperComponent: ({ children }: { children: ReactElement }) => (
           <Paper
             elevation={3}
             sx={{ background: theme.palette.background.paper }}

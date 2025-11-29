@@ -1,4 +1,4 @@
-import React, { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties, type ReactElement } from 'react';
 
 import Tooltip from '../Tooltip/Tooltip';
 import DetailsHeader from '../DetailsHeader/DetailsHeader';

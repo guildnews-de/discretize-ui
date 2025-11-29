@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties, type ReactElement } from 'react';
 import PROFESSIONS, {
   type EliteSpecTypes,
   type ProfessionTypes,

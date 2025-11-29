@@ -1,5 +1,4 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
-import React from 'react';
 import Effect from './Effect';
 
 const meta: Meta<typeof Effect> = {

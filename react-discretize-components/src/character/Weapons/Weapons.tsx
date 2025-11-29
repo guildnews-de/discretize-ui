@@ -1,3 +1,4 @@
+import type { ComponentProps } from 'react';
 import { Icon, Item } from '@discretize/gw2-ui-new';
 import DynamicItem from '../../helpers/DynamicItem/DynamicItem';
 import firstUppercase from '../../helpers/firstUppercase';
@@ -7,7 +8,7 @@ import useMediaQuery from '../../helpers/useMediaQuery';
 import { Infusions } from '../BackAndTrinkets/BackAndTrinkets';
 import classes from '../Armor/Armor.module.css';
 
-type ItemUpgrades = React.ComponentProps<typeof Item>['upgrades'];
+type ItemUpgrades = ComponentProps<typeof Item>['upgrades'];
 
 function createUpgrades(array: (number | undefined)[]): ItemUpgrades {
   return array.filter((elem) => typeof elem === 'number') as number[];
@@ -22,8 +23,8 @@ function formatSigil(text: string): string {
   );
 }
 
-type Affix = React.ComponentProps<typeof Item>['stat'];
-type Rarity = React.ComponentProps<typeof DynamicItem>['rarity'];
+type Affix = ComponentProps<typeof Item>['stat'];
+type Rarity = ComponentProps<typeof DynamicItem>['rarity'];
 
 export interface WeaponsProps {
   showInfusions?: boolean;

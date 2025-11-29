@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { createContext, useContext } from 'react';
 
 export type APILanguage = 'de' | 'en' | 'es' | 'fr' | 'zh';
 export const API_LANGUAGES = ['de', 'en', 'es', 'fr', 'zh'];
@@ -19,7 +19,7 @@ function getNavigatorDefaultLanguage(): APILanguage {
   return 'en';
 }
 
-const APILanguageContext = React.createContext<APILanguage>(
+const APILanguageContext = createContext<APILanguage>(
   getNavigatorDefaultLanguage(),
 );
 
@@ -29,7 +29,7 @@ export function useAPILanguage(lang?: string) {
   if (lang && isAPILanguage(lang)) {
     return lang;
   } else {
-    return React.useContext(APILanguageContext);
+    return useContext(APILanguageContext);
   }
 }
 

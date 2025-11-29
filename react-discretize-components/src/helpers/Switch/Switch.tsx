@@ -1,8 +1,8 @@
-import * as React from 'react';
+import type { ChangeEvent } from 'react';
 import classes from './Switch.module.css';
 
 export interface SwitchProps {
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   label: string;
 }
 

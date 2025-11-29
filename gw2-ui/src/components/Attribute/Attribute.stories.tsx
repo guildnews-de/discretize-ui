@@ -1,5 +1,4 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
-import React from 'react';
 import Attribute from './Attribute';
 
 const meta: Meta<typeof Attribute> = {

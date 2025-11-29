@@ -1,9 +1,10 @@
+import type { ComponentProps } from 'react';
 import { type CreateItem, Item } from '@discretize/gw2-ui-new';
 import DynamicItem from '../../helpers/DynamicItem/DynamicItem';
 import firstUppercase from '../../helpers/firstUppercase';
 import classes from './Armor.module.css';
 
-type ItemUpgrades = React.ComponentProps<typeof Item>['upgrades'];
+type ItemUpgrades = ComponentProps<typeof Item>['upgrades'];
 
 /**
  * Creates an array of upgrades that can be passed on to the Item component. Undefined values will be filtered out.
@@ -40,9 +41,9 @@ export function formatInfusion(result: string): string {
   return result;
 }
 
-type Affix = React.ComponentProps<typeof Item>['stat'];
-type Weights = React.ComponentProps<typeof CreateItem>['weight'];
-type Rarity = React.ComponentProps<typeof CreateItem>['rarity'];
+type Affix = ComponentProps<typeof Item>['stat'];
+type Weights = ComponentProps<typeof CreateItem>['weight'];
+type Rarity = ComponentProps<typeof CreateItem>['rarity'];
 
 export type ArmorProps = Partial<{
   weight?: Weights;

@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { type PropsWithChildren, type ReactElement } from 'react';
+import { type PropsWithChildren, type ReactElement } from 'react';
 import DetailsHeaderTitle from '../DetailsHeaderTitle/DetailsHeaderTitle';
 import Icon, { type IconProps } from '../Icon/Icon';
 import css from './DetailsHeader.module.css';

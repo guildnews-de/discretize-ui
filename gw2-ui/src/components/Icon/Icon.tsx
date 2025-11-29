@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, {
+import {
   type CSSProperties,
   type MouseEventHandler,
   type ReactElement,

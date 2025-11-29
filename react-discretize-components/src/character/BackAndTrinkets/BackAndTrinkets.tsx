@@ -1,6 +1,6 @@
 import { Item } from '@discretize/gw2-ui-new';
 import classNames from 'classnames';
-import { Fragment } from 'react';
+import { Fragment, type ComponentProps } from 'react';
 import DynamicItem from '../../helpers/DynamicItem/DynamicItem';
 import defaultClasses from '../../styles/defaultStyles.module.css';
 import { formatInfusion } from '../Armor/Armor';
@@ -29,8 +29,8 @@ export const Infusions = ({
   );
 };
 
-type Affix = React.ComponentProps<typeof Item>['stat'];
-type Rarity = React.ComponentProps<typeof DynamicItem>['rarity'];
+type Affix = ComponentProps<typeof Item>['stat'];
+type Rarity = ComponentProps<typeof DynamicItem>['rarity'];
 
 export interface BackAndTrinketsProps {
   showInfusions?: boolean;

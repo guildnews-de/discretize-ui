@@ -1,11 +1,11 @@
 import { Tooltip } from '@discretize/gw2-ui-new';
-import * as React from 'react';
+import type { CSSProperties } from 'react';
 import classes from './HelperIcon.module.css';
 
 export interface HelperIconProps {
   text: string;
   fontSize?: string;
-  style?: React.CSSProperties;
+  style?: CSSProperties;
 }
 const HelperIcon = ({ text, fontSize, style }: HelperIconProps) => {
   return (

@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 import classNames from 'classnames';
 import { Tooltip, Icon, DetailsHeader } from '@discretize/gw2-ui-new';
 import sizes, { type IconSizes } from '../iconSizes';
@@ -26,4 +26,4 @@ const NoSelection = ({ className, size, ...rest }: NoSelectionProps) => {
   );
 };
 
-export default React.memo(NoSelection);
+export default memo(NoSelection);

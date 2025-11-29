@@ -6,7 +6,7 @@ import {
   type ClientRectObject,
 } from '@floating-ui/react-dom';
 
-import React, {
+import {
   type ReactElement,
   type ReactNode,
   useEffect,

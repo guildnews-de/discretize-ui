@@ -1,5 +1,4 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
-import React from 'react';
 import IconWithText from './IconWithText';
 
 const meta: Meta<typeof IconWithText> = {

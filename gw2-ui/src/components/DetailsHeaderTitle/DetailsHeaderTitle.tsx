@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { type PropsWithChildren, type ReactElement } from 'react';
+import { type PropsWithChildren, type ReactElement } from 'react';
 import css from './DetailsHeaderTitle.module.css';
 
 const DetailsHeaderTitle = ({

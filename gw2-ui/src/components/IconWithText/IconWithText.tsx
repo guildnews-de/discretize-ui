@@ -1,8 +1,9 @@
 import clsx from 'clsx';
-import React, {
+import {
   type CSSProperties,
   type JSX,
   type MouseEventHandler,
+  forwardRef,
 } from 'react';
 import Icon, { type IconProps } from '../Icon/Icon';
 import Progress, { type ProgressProps } from '../Progress/Progress';
@@ -23,7 +24,7 @@ export interface IconWithTextProps {
   onClick?: MouseEventHandler<HTMLSpanElement>;
 }
 
-const IconWithText = React.forwardRef<HTMLInputElement, IconWithTextProps>(
+const IconWithText = forwardRef<HTMLInputElement, IconWithTextProps>(
   function IconWithText(
     {
       icon,

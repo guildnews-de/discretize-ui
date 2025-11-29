@@ -1,4 +1,4 @@
-import React, { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties, type ReactElement } from 'react';
 import { type AugmentationsTypes } from '../../data/augmentations';
 import { translate, useAPILanguage } from '../../i18n';
 import {

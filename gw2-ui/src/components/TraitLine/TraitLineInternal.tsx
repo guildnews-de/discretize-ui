@@ -5,6 +5,7 @@ import {
   type ReactElement,
   useEffect,
   useState,
+  type MouseEvent,
 } from 'react';
 import type GW2ApiSpecialization from '../../gw2api/types/specialization/specialization';
 import type GW2ApiTrait from '../../gw2api/types/traits/trait';
@@ -131,7 +132,7 @@ const TraitLineInternal = (props: TraitLineProps): ReactElement => {
       customLang,
       ...(!isSelected &&
         (controlled || selectable) && {
-          onClick: (event: React.MouseEvent<HTMLDivElement>) => {
+          onClick: (event: MouseEvent<HTMLDivElement>) => {
             event.preventDefault();
 
             if (controlled) {

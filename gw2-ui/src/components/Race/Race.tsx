@@ -1,4 +1,4 @@
-import React, { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties, type ReactElement } from 'react';
 import races, { type RacesTypes } from '../../data/races';
 import Error from '../Error/Error';
 import IconWithText from '../IconWithText/IconWithText';

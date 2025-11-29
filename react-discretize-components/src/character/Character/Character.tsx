@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import classNames from 'classnames';
-import React, { type CSSProperties, type JSX, type ReactNode } from 'react';
+import type { CSSProperties, JSX, ReactNode, ChangeEvent } from 'react';
 import HelperIcon from '../../helpers/HelperIcon/HelperIcon';
 import OwnSwitch from '../../helpers/Switch/Switch';
 import Armor, { type ArmorProps } from '../Armor/Armor';
@@ -31,7 +32,7 @@ export interface CharacterProps {
     onChange,
     label,
   }: {
-    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    onChange: (event: ChangeEvent<HTMLInputElement>) => void;
     label: string;
   }) => JSX.Element;
   disableSwitch?: boolean;
@@ -50,8 +51,8 @@ const Character = ({
   switchElement: Switch = OwnSwitch,
   disableSwitch = false,
 }: CharacterProps) => {
-  const [showInfusions, setShowInfusions] = React.useState(false);
-  const [showUnbuffed, setShowUnbuffed] = React.useState(false);
+  const [showInfusions, setShowInfusions] = useState(false);
+  const [showUnbuffed, setShowUnbuffed] = useState(false);
 
   const Section = ({
     children,

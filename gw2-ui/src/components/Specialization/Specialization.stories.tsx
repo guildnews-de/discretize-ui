@@ -1,5 +1,4 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
-import React from 'react';
 import Specialization from './Specialization';
 
 const meta: Meta<typeof Specialization> = {

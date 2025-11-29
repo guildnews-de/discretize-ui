@@ -1,7 +1,8 @@
+import type { ComponentProps } from 'react';
 import { CreateItem, Item } from '@discretize/gw2-ui-new';
 import defaultClasses from '../../styles/defaultStyles.module.css';
 
-type Affix = React.ComponentProps<typeof Item>['stat'];
+type Affix = ComponentProps<typeof Item>['stat'];
 
 function createUpgrades(
   array: (number | [number, number] | undefined)[],
@@ -27,8 +28,8 @@ const DynamicItem = ({
   affix?: Affix;
   upgrades?: (number | undefined | [number, number])[];
   type?: string;
-  weight?: React.ComponentProps<typeof CreateItem>['weight'];
-  rarity?: React.ComponentProps<typeof CreateItem>['rarity'];
+  weight?: ComponentProps<typeof CreateItem>['weight'];
+  rarity?: ComponentProps<typeof CreateItem>['rarity'];
 }) => {
   const sharedProps = {
     disableText: true,

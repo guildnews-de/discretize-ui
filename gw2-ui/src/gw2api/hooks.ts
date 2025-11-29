@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useReducer } from 'react';
 import { type APILanguage, useAPILanguage } from '../i18n';
 
 import APICache, { type Id, type Override } from './cache';
@@ -47,14 +47,14 @@ function skillCache(lang: APILanguage) {
 
 export function useSkills(ids: Id[], cutomLang?: string) {
   const lang = useAPILanguage(cutomLang);
-  const [, forceRedraw] = React.useReducer((i) => i + 1, 0);
+  const [, forceRedraw] = useReducer((i) => i + 1, 0);
 
   return skillCache(lang).getMultiple(ids, forceRedraw);
 }
 
 export function useSkill(id: Id, cutomLang?: string) {
   const lang = useAPILanguage(cutomLang);
-  const [, forceRedraw] = React.useReducer((i) => i + 1, 0);
+  const [, forceRedraw] = useReducer((i) => i + 1, 0);
 
   return skillCache(lang).getOne(id, forceRedraw);
 }
@@ -67,14 +67,14 @@ function traitCache(lang: APILanguage) {
 
 export function useTraits(ids: Id[], cutomLang?: string) {
   const lang = useAPILanguage(cutomLang);
-  const [, forceRedraw] = React.useReducer((i) => i + 1, 0);
+  const [, forceRedraw] = useReducer((i) => i + 1, 0);
 
   return traitCache(lang).getMultiple(ids, forceRedraw);
 }
 
 export function useTrait(id: Id, cutomLang?: string) {
   const lang = useAPILanguage(cutomLang);
-  const [, forceRedraw] = React.useReducer((i) => i + 1, 0);
+  const [, forceRedraw] = useReducer((i) => i + 1, 0);
 
   return traitCache(lang).getOne(id, forceRedraw);
 }
@@ -87,14 +87,14 @@ function itemCache(lang: APILanguage) {
 
 export function useItems(ids: Id[], cutomLang?: string) {
   const lang = useAPILanguage(cutomLang);
-  const [, forceRedraw] = React.useReducer((i) => i + 1, 0);
+  const [, forceRedraw] = useReducer((i) => i + 1, 0);
 
   return itemCache(lang).getMultiple(ids, forceRedraw);
 }
 
 export function useItem(id: Id, cutomLang?: string) {
   const lang = useAPILanguage(cutomLang);
-  const [, forceRedraw] = React.useReducer((i) => i + 1, 0);
+  const [, forceRedraw] = useReducer((i) => i + 1, 0);
 
   return itemCache(lang).getOne(id, forceRedraw);
 }
@@ -116,14 +116,14 @@ function specializationCache(lang: APILanguage) {
 
 export function useSpecializations(ids: Id[], cutomLang?: string) {
   const lang = useAPILanguage(cutomLang);
-  const [, forceRedraw] = React.useReducer((i) => i + 1, 0);
+  const [, forceRedraw] = useReducer((i) => i + 1, 0);
 
   return specializationCache(lang).getMultiple(ids, forceRedraw);
 }
 
 export function useSpecialization(id: Id, cutomLang?: string) {
   const lang = useAPILanguage(cutomLang);
-  const [, forceRedraw] = React.useReducer((i) => i + 1, 0);
+  const [, forceRedraw] = useReducer((i) => i + 1, 0);
 
   return specializationCache(lang).getOne(id, forceRedraw);
 }

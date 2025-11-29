@@ -1,4 +1,4 @@
-import React, { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties, type ReactElement } from 'react';
 
 import Effect from '../Effect/Effect';
 

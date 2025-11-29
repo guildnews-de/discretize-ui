@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { capitalize } from '../../helpers/capitalize';
-import React, { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties, type ReactElement } from 'react';
 import DetailsHeader from '../DetailsHeader/DetailsHeader';
 import DetailsText from '../DetailsText/DetailsText';
 import Error, { type ErrorProps } from '../Error/Error';

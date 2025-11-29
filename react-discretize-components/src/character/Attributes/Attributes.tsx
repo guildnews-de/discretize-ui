@@ -1,3 +1,4 @@
+import type { ComponentProps } from 'react';
 import { Attribute, Profession } from '@discretize/gw2-ui-new';
 import firstUppercase from '../../helpers/firstUppercase';
 import classes from './Attributes.module.css';
@@ -76,11 +77,11 @@ const attributes: {
   { name: 'Magic Find', text: () => '0' },
 ];
 
-type AttributeType = React.ComponentProps<typeof Attribute>['name'];
+type AttributeType = ComponentProps<typeof Attribute>['name'];
 
 export interface AttributesProps {
-  profession: React.ComponentProps<typeof Profession>['name'];
-  specialization: React.ComponentProps<typeof Profession>['name'];
+  profession: ComponentProps<typeof Profession>['name'];
+  specialization: ComponentProps<typeof Profession>['name'];
   data: Partial<Record<AttributeType, number>>; // TODO technically this type is Record<Omit<AttributeType, "Gold Find" | "Karma Gain" | "Magic Find" | "XP Gain">, number>
 }
 

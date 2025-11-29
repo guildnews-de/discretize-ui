@@ -1,4 +1,4 @@
-import React, { type ReactElement, type ReactNode } from 'react';
+import { isValidElement, type ReactElement, type ReactNode } from 'react';
 import { capitalize } from '../../helpers/capitalize';
 import css from './DetailsText.module.css';
 
@@ -83,7 +83,7 @@ const DetailsText = ({
         .filter((line) => !!line)
         .map((line, index) => (
           <div key={`DetailsText${index.toString()}`} {...lineProps}>
-            {React.isValidElement(line) ? line : renderFlavor(line as string)}
+            {isValidElement(line) ? line : renderFlavor(line as string)}
           </div>
         ))}
     </div>

@@ -1,5 +1,5 @@
+import type { ReactNode, FC } from 'react';
 import clsx from 'clsx';
-import React from 'react';
 import type GW2ApiFact from '../../gw2api/types/common/fact';
 import apiAttributes from '../../helpers/apiAttributes';
 import formatDuration from '../../helpers/formatDuration';
@@ -10,8 +10,8 @@ import { attributes } from '../../builder';
 import { capitalize } from '../../helpers/capitalize';
 
 const getKeyValue = (data: GW2ApiFact) => {
-  let key: React.ReactNode;
-  let value: React.ReactNode;
+  let key: ReactNode;
+  let value: ReactNode;
   let count: number | undefined = undefined;
   switch (data.type) {
     case 'AttributeAdjust': {
@@ -245,7 +245,7 @@ export interface FactsProps {
   facts: GW2ApiFact[];
   className?: string;
 }
-const Facts: React.FC<FactsProps> = ({ facts, className }) => {
+const Facts: FC<FactsProps> = ({ facts, className }) => {
   return (
     <div className={clsx(className)}>
       {facts

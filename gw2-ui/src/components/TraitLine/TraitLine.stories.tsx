@@ -1,5 +1,5 @@
+import { useState } from 'react';
 import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
-import React from 'react';
 import TraitLine from './TraitLine';
 import Specialization from '../Specialization/Specialization';
 
@@ -103,8 +103,8 @@ const idsArray = Array(72)
   .map((element, index) => index + 1);
 
 export function Helper() {
-  const [id, setId] = React.useState(1);
-  const [selected, setSelected] = React.useState([0, 0, 0]);
+  const [id, setId] = useState(1);
+  const [selected, setSelected] = useState([0, 0, 0]);
 
   return (
     <>

@@ -1,5 +1,4 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/react-webpack5';
-import React from 'react';
 import ControlEffect from './ControlEffect';
 import { APILanguageProvider } from '../../i18n';
 
