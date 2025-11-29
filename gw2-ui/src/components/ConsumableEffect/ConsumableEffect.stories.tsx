@@ -12,7 +12,6 @@ const meta: Meta<typeof ConsumableEffect> = {
 export default meta;
 
 const Template: StoryFn<typeof ConsumableEffect> = (args) => {
-const Template: StoryFn<typeof ConsumableEffect> = (args) => {
   return <ConsumableEffect {...args} />;
 };
 

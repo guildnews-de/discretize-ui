@@ -12,7 +12,6 @@ const meta: Meta<typeof Condition> = {
 export default meta;
 
 const Template: StoryFn<typeof Condition> = (args) => {
-const Template: StoryFn<typeof Condition> = (args) => {
   return <Condition {...args} />;
 };
 

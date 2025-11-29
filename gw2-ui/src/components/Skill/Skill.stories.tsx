@@ -13,7 +13,6 @@ const meta: Meta<typeof Skill> = {
 export default meta;
 
 const Template: StoryFn<typeof Skill> = (args) => {
-const Template: StoryFn<typeof Skill> = (args) => {
   return <Skill {...args} />;
 };
 

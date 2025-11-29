@@ -12,7 +12,6 @@ const meta: Meta<typeof Trait> = {
 export default meta;
 
 const Template: StoryFn<typeof Trait> = (args) => {
-const Template: StoryFn<typeof Trait> = (args) => {
   return <Trait {...args} />;
 };
 

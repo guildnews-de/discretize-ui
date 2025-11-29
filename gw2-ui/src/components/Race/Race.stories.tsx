@@ -13,7 +13,6 @@ const meta: Meta<typeof Race> = {
 export default meta;
 
 const Template: StoryFn<typeof Race> = (args) => {
-const Template: StoryFn<typeof Race> = (args) => {
   return <Race {...args} />;
 };
 

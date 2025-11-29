@@ -12,7 +12,6 @@ const meta: Meta<typeof TextDivider> = {
 export default meta;
 
 const Template: StoryFn<typeof TextDivider> = (args) => {
-const Template: StoryFn<typeof TextDivider> = (args) => {
   return <TextDivider {...args} />;
 };
 

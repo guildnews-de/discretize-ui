@@ -12,7 +12,6 @@ const meta: Meta<typeof Icon> = {
 export default meta;
 
 const Template: StoryFn<typeof Icon> = (args: ComponentProps<typeof Icon>) => {
-const Template: StoryFn<typeof Icon> = (args: ComponentProps<typeof Icon>) => {
   return (
     <>
       <Icon {...args} />

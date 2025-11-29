@@ -12,7 +12,6 @@ const meta: Meta<typeof Coin> = {
 export default meta;
 
 const Template: StoryFn<typeof Coin> = (args) => {
-const Template: StoryFn<typeof Coin> = (args) => {
   return <Coin {...args} />;
 };
 

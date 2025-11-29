@@ -12,7 +12,6 @@ const meta: Meta<typeof Aura> = {
 export default meta;
 
 const Template: StoryFn<typeof Aura> = (args) => {
-const Template: StoryFn<typeof Aura> = (args) => {
   return <Aura {...args} />;
 };
 

@@ -12,7 +12,6 @@ const meta: Meta<typeof WikiLink> = {
 export default meta;
 
 const Template: StoryFn<typeof WikiLink> = (args) => {
-const Template: StoryFn<typeof WikiLink> = (args) => {
   return (
     <>
       <WikiLink {...args} />

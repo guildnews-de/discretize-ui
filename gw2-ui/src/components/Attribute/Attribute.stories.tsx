@@ -12,7 +12,6 @@ const meta: Meta<typeof Attribute> = {
 export default meta;
 
 const Template: StoryFn<typeof Attribute> = (args) => {
-const Template: StoryFn<typeof Attribute> = (args) => {
   return <Attribute {...args} />;
 };
 

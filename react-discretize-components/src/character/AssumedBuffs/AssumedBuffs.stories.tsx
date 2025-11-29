@@ -12,7 +12,6 @@ const meta: Meta<typeof AssumedBuffs> = {
 export default meta;
 
 const Template: StoryFn<typeof AssumedBuffs> = (args) => {
-const Template: StoryFn<typeof AssumedBuffs> = (args) => {
   return <AssumedBuffs {...args} />;
 };
 

@@ -12,7 +12,6 @@ const meta: Meta<typeof Boon> = {
 export default meta;
 
 const Template: StoryFn<typeof Boon> = (args) => {
-const Template: StoryFn<typeof Boon> = (args) => {
   return <Boon {...args} />;
 };
 

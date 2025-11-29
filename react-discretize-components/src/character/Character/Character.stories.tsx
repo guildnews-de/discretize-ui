@@ -12,7 +12,6 @@ const meta: Meta<typeof Character> = {
 export default meta;
 
 const Template: StoryFn<typeof Character> = (args) => {
-const Template: StoryFn<typeof Character> = (args) => {
   return <Character {...args} />;
 };
 

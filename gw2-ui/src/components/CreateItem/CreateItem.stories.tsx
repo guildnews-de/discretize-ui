@@ -34,7 +34,6 @@ const meta: Meta<typeof CreateItem> = {
 export default meta;
 
 const Template: StoryFn<typeof CreateItem> = (args) => {
-const Template: StoryFn<typeof CreateItem> = (args) => {
   return <CreateItem {...args} />;
 };
 

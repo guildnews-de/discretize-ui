@@ -13,7 +13,6 @@ const meta: Meta<typeof ControlEffect> = {
 export default meta;
 
 const Template: StoryFn<typeof ControlEffect> = (args) => {
-const Template: StoryFn<typeof ControlEffect> = (args) => {
   return <ControlEffect {...args} />;
 };
 

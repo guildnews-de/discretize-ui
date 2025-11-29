@@ -12,7 +12,6 @@ const meta: Meta<typeof Weapons> = {
 export default meta;
 
 const Template: StoryFn<typeof Weapons> = (args) => {
-const Template: StoryFn<typeof Weapons> = (args) => {
   return <Weapons {...args} />;
 };
 

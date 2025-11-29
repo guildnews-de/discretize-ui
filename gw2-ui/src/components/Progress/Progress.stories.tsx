@@ -12,7 +12,6 @@ const meta: Meta<typeof Progress> = {
 export default meta;
 
 const Template: StoryFn<typeof Progress> = (args) => {
-const Template: StoryFn<typeof Progress> = (args) => {
   return (
     <>
       <Progress {...args} />

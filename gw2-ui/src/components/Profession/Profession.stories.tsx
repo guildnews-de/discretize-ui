@@ -13,7 +13,6 @@ const meta: Meta<typeof Profession> = {
 export default meta;
 
 const Template: StoryFn<typeof Profession> = (args) => {
-const Template: StoryFn<typeof Profession> = (args) => {
   return <Profession {...args} />;
 };
 

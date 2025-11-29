@@ -13,7 +13,6 @@ const meta: Meta<typeof Error> = {
 export default meta;
 
 const Template: StoryFn<typeof Error> = (args) => {
-const Template: StoryFn<typeof Error> = (args) => {
   return (
     <>
       <Error {...args} />

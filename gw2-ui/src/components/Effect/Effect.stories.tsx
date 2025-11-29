@@ -12,7 +12,6 @@ const meta: Meta<typeof Effect> = {
 export default meta;
 
 const Template: StoryFn<typeof Effect> = (args) => {
-const Template: StoryFn<typeof Effect> = (args) => {
   return <Effect {...args} />;
 };
 

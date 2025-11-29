@@ -12,7 +12,6 @@ const meta: Meta<typeof BackAndTrinkets> = {
 export default meta;
 
 const Template: StoryFn<typeof BackAndTrinkets> = (args) => {
-const Template: StoryFn<typeof BackAndTrinkets> = (args) => {
   return <BackAndTrinkets {...args} />;
 };
 

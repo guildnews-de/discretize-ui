@@ -12,7 +12,6 @@ const meta: Meta<typeof Tooltip> = {
 export default meta;
 
 const Template: StoryFn<typeof Tooltip> = (args) => {
-const Template: StoryFn<typeof Tooltip> = (args) => {
   return (
     <>
       <Tooltip

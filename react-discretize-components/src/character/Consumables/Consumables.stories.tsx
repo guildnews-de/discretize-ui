@@ -12,7 +12,6 @@ const meta: Meta<typeof Consumables> = {
 export default meta;
 
 const Template: StoryFn<typeof Consumables> = (args) => {
-const Template: StoryFn<typeof Consumables> = (args) => {
   return <Consumables {...args} />;
 };
 

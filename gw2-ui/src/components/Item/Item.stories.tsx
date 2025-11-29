@@ -16,7 +16,6 @@ const meta: Meta<typeof Item> = {
 export default meta;
 
 const Template: StoryFn<typeof Item> = (args) => {
-const Template: StoryFn<typeof Item> = (args) => {
   return <Item {...args} />;
 };
 

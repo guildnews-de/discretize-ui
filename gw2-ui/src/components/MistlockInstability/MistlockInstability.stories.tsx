@@ -12,7 +12,6 @@ const meta: Meta<typeof MistlockInstability> = {
 export default meta;
 
 const Template: StoryFn<typeof MistlockInstability> = (args) => {
-const Template: StoryFn<typeof MistlockInstability> = (args) => {
   return <MistlockInstability {...args} />;
 };
 

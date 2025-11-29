@@ -12,7 +12,6 @@ const meta: Meta<typeof HelperIcon> = {
 export default meta;
 
 const Template: StoryFn<typeof HelperIcon> = (args) => {
-const Template: StoryFn<typeof HelperIcon> = (args) => {
   return <HelperIcon {...args} />;
 };
 

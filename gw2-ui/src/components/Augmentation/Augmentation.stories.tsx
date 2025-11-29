@@ -12,7 +12,6 @@ const meta: Meta<typeof Augmentation> = {
 export default meta;
 
 const Template: StoryFn<typeof Augmentation> = (args) => {
-const Template: StoryFn<typeof Augmentation> = (args) => {
   return <Augmentation {...args} />;
 };
 

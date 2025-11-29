@@ -12,7 +12,6 @@ const meta: Meta<typeof Specialization> = {
 export default meta;
 
 const Template: StoryFn<typeof Specialization> = (args) => {
-const Template: StoryFn<typeof Specialization> = (args) => {
   return <Specialization {...args} />;
 };
 

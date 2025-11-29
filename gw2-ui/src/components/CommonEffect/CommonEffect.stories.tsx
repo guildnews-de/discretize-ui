@@ -13,7 +13,6 @@ const meta: Meta<typeof CommonEffect> = {
 export default meta;
 
 const Template: StoryFn<typeof CommonEffect> = (args) => {
-const Template: StoryFn<typeof CommonEffect> = (args) => {
   return <CommonEffect {...args} />;
 };
 

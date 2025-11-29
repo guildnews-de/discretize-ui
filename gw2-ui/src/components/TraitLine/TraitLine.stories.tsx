@@ -15,7 +15,6 @@ const meta: Meta<typeof TraitLine> = {
 export default meta;
 
 const Template: StoryFn<typeof TraitLine> = (args) => {
-const Template: StoryFn<typeof TraitLine> = (args) => {
   return <TraitLine {...args} onSelect={undefined} onReset={undefined} />;
 };
 

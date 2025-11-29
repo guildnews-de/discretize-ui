@@ -9,7 +9,6 @@ const meta: Meta<typeof Spinner> = {
 export default meta;
 
 const Template: StoryFn<typeof Spinner> = (args) => {
-const Template: StoryFn<typeof Spinner> = (args) => {
   return (
     <>
       Spinner with inline {args.inline ? 'enabled' : 'disabled'}
