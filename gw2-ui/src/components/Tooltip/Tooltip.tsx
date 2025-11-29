@@ -65,9 +65,10 @@ const Tooltip = ({
     // update manually
     update,
     // Set the reference to the hovered element and update
-    reference,
+    refs: { setReference, setFloating },
+    // reference,
     // Set the reference to the tooltip and update
-    floating,
+    // floating,
   } = useFloating({
     middleware: FLOATING_MIDDLEWARE,
   });
@@ -143,13 +144,13 @@ const Tooltip = ({
   // Create and register a virtual element for floating-ui
   useLayoutEffectSafe(() => {
     if (!visible) {
-      reference(null);
+      setReference(null);
       return;
     }
     const virtualElement = {
       getBoundingClientRect: () => position_ref.current,
     };
-    reference(virtualElement);
+    setReference(virtualElement);
   }, [visible]);
 
   return (
@@ -159,7 +160,7 @@ const Tooltip = ({
         ? createPortal(
             <div
               className={css.root}
-              ref={floating}
+              ref={setFloating}
               style={{
                 position: strategy,
                 top: y ?? '',
