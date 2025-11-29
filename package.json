@@ -6,6 +6,9 @@
   "private": true,
   "scripts": {
     "build": "node ./build.mjs",
+    "prettier": "prettier --check --config ./.prettierrc.json --ignore-path ./.prettierignore .",
+    "prettier:fix": "prettier --write --config ./.prettierrc.json --ignore-path ./.prettierignore .",
+    "lint": "eslint -c ./.eslintrc.cjs .",
     "generate-api-cache": "node --experimental-fetch ./generate_api_cache.mjs"
   },
   "dependencies": {
