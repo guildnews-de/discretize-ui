@@ -1,2 +1,2 @@
-export var css: string;
+export const css: string;
 export default css;
