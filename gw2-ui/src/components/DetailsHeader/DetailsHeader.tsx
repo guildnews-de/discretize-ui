@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { type PropsWithChildren, type ReactElement } from 'react';
+import { type PropsWithChildren } from 'react';
 import DetailsHeaderTitle from '../DetailsHeaderTitle/DetailsHeaderTitle';
 import Icon, { type IconProps } from '../Icon/Icon';
 import css from './DetailsHeader.module.css';
@@ -24,7 +24,7 @@ const DetailsHeader = ({
   flags,
   children,
   className,
-}: PropsWithChildren<DetailsHeaderProps>): ReactElement => {
+}: PropsWithChildren<DetailsHeaderProps>) => {
   return (
     <div className={clsx(className, css.root)}>
       {typeof icon === 'string' ||

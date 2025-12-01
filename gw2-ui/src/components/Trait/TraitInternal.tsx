@@ -1,4 +1,4 @@
-import { type MouseEventHandler, type ReactElement } from 'react';
+import { type MouseEventHandler } from 'react';
 
 import clsx from 'clsx';
 import { type CSSProperties } from 'react';
@@ -30,7 +30,7 @@ export interface TraitInternalProps {
   onClick?: MouseEventHandler<HTMLSpanElement>;
 }
 
-const TraitInternal = (props: TraitInternalProps): ReactElement => {
+const TraitInternal = (props: TraitInternalProps) => {
   const {
     data,
     text,

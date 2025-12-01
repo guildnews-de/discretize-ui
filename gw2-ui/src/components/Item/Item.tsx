@@ -1,4 +1,3 @@
-import { type ReactElement } from 'react';
 import { useItems } from '../../gw2api/hooks';
 import type GW2ApiItem from '../../gw2api/types/items/item';
 import Error from '../Error/Error';
@@ -20,7 +19,7 @@ const SKILL_ERROR_MESSAGES = {
     `A Network Error occured trying to fetch the item ${id}.`,
 };
 
-const Item = (props: ItemProps): ReactElement => {
+const Item = (props: ItemProps) => {
   const {
     id,
     disableIcon,

@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties } from 'react';
 import { type APILanguage, useAPILanguage } from '../../i18n';
 import DetailsHeader from '../DetailsHeader/DetailsHeader';
 import DetailsText from '../DetailsText/DetailsText';
@@ -44,7 +44,7 @@ const Error = ({
   style,
   iconProps,
   customLang,
-}: ErrorProps): ReactElement => {
+}: ErrorProps) => {
   const language = useAPILanguage(customLang);
   const errorIconClass = code === 404 ? css.imageError404 : css.imageError500;
 

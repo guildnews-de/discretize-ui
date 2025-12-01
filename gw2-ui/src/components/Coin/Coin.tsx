@@ -1,4 +1,4 @@
-import { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties } from 'react';
 import css from './Coin.module.css';
 import Icon, { IconProps } from '../Icon/Icon';
 import clsx from 'clsx';
@@ -24,7 +24,7 @@ const Coin = ({
   className,
   style,
   iconProps = {},
-}: CoinProps): ReactElement => {
+}: CoinProps) => {
   let copper = value;
 
   const gold = Math.floor(copper / 10000);

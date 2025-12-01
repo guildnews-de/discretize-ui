@@ -1,4 +1,4 @@
-import { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties } from 'react';
 import races, { type RacesTypes } from '../../data/races';
 import Error from '../Error/Error';
 import IconWithText from '../IconWithText/IconWithText';
@@ -41,7 +41,7 @@ const Race = ({
   style,
   iconProps,
   customLang,
-}: RaceProps): ReactElement => {
+}: RaceProps) => {
   const language = useAPILanguage(customLang);
 
   if (!name || !races.includes(name)) {

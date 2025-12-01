@@ -1,4 +1,3 @@
-import { type ReactElement } from 'react';
 import type GW2ApiSpecialization from '../../gw2api/types/specialization/specialization';
 import DetailsHeader from '../DetailsHeader/DetailsHeader';
 import DetailsText from '../DetailsText/DetailsText';
@@ -9,7 +8,7 @@ export interface SpecializationTooltipProps {
 
 const SpecializationTooltip = ({
   data,
-}: SpecializationTooltipProps): ReactElement => {
+}: SpecializationTooltipProps) => {
   const { name, profession, elite } = data;
 
   return (

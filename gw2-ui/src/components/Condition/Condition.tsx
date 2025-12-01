@@ -1,4 +1,4 @@
-import { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties } from 'react';
 
 import Effect from '../Effect/Effect';
 import { IconProps } from '../Icon/Icon';
@@ -29,7 +29,7 @@ const Condition = ({
   wikiLinkProps,
   customLang,
   ...props
-}: ConditionProps): ReactElement => {
+}: ConditionProps) => {
   const language = useAPILanguage(customLang);
   const nameTranslated = useTranslation(CONDITIONS, name, language);
   const descriptionTranslated = useTranslation(

@@ -1,4 +1,4 @@
-import { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties } from 'react';
 import Effect from '../Effect/Effect';
 import { IconProps } from '../Icon/Icon';
 import { type AuraTypes } from '../../data/auras';
@@ -22,7 +22,7 @@ export interface AuraProps {
   customLang?: string;
 }
 
-const Aura = (props: AuraProps): ReactElement => {
+const Aura = (props: AuraProps) => {
   const { name, customLang, wikiLinkProps } = props;
   const language = useAPILanguage(customLang);
 

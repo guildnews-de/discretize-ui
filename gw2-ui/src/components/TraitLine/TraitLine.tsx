@@ -1,4 +1,4 @@
-import { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties } from 'react';
 import { useSpecialization } from '../../gw2api/hooks';
 import Error from '../Error/Error';
 import Progress from '../Progress/Progress';
@@ -29,7 +29,7 @@ const TRAITLINE_ERROR_MESSAGES = {
     `A Network Error occured trying to fetch the specialization ${id}.`,
 };
 
-const TraitLine = (props: TraitLineProps): ReactElement => {
+const TraitLine = (props: TraitLineProps) => {
   const specialization = useSpecialization(props.id, props.customLang);
 
   if (specialization.loading) {

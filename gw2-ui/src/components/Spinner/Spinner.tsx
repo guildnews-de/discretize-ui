@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import { type ReactElement } from 'react';
 import css from './Spinner.module.css';
 
 export interface SpinnerProps {
@@ -7,7 +6,7 @@ export interface SpinnerProps {
   className?: string;
 }
 
-const Spinner = ({ inline, className }: SpinnerProps): ReactElement => (
+const Spinner = ({ inline, className }: SpinnerProps) => (
   <div className={clsx(className, inline && css.inline, css.root)} />
 );
 

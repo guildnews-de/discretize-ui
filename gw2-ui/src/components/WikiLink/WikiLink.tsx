@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties } from 'react';
 import css from './WikiLink.module.css';
 
 // https://wiki.guildwars2.com/wiki/Template:Language
@@ -42,7 +42,7 @@ const WikiLink = ({
   lang = 'en',
   style,
   className,
-}: WikiLinkProps): ReactElement => {
+}: WikiLinkProps) => {
   return (
     <Component
       // if there is no className provided, we assume that there is no profession specific styling wanted and default.

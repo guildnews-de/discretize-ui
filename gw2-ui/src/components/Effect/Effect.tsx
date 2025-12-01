@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { capitalize } from '../../helpers/capitalize';
-import { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties } from 'react';
 import DetailsHeader from '../DetailsHeader/DetailsHeader';
 import DetailsText from '../DetailsText/DetailsText';
 import Error, { type ErrorProps } from '../Error/Error';
@@ -52,7 +52,7 @@ const Effect = ({
   iconProps,
   className,
   style,
-}: EffectProps): ReactElement => {
+}: EffectProps) => {
   if (!type || !name || typeof description === 'undefined') {
     return (
       <Error

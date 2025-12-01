@@ -1,4 +1,3 @@
-import { type ReactElement } from 'react';
 
 import { useTrait } from '../../gw2api/hooks';
 import Error from '../Error/Error';
@@ -20,7 +19,7 @@ const TRAIT_ERROR_MESSAGES = {
     `A Network Error occured trying to fetch the trait ${id}.`,
 };
 
-const Trait = (props: TraitProps): ReactElement => {
+const Trait = (props: TraitProps) => {
   const trait = useTrait(props.id, props.customLang);
 
   if (trait.loading) {

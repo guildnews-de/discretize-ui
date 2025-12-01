@@ -56,7 +56,7 @@ const Tooltip = ({
   render,
   containerProps,
   disabled,
-}: TooltipProps): ReactElement => {
+}: TooltipProps) => {
   const {
     // position of the tooltip
     x,

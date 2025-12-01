@@ -1,4 +1,3 @@
-import { type ReactElement } from 'react';
 import { useSpecialization } from '../../gw2api/hooks';
 import Error from '../Error/Error';
 import IconWithText from '../IconWithText/IconWithText';
@@ -23,7 +22,7 @@ export interface SpecializationProps
   customLang?: string;
 }
 
-const Specialization = (props: SpecializationProps): ReactElement => {
+const Specialization = (props: SpecializationProps) => {
   const specialization = useSpecialization(props.id, props.customLang);
 
   if (specialization.loading) {

@@ -1,4 +1,3 @@
-import { type ReactElement } from 'react';
 import { useSkill } from '../../gw2api/hooks';
 import Error from '../Error/Error';
 import IconWithText from '../IconWithText/IconWithText';
@@ -19,7 +18,7 @@ const SKILL_ERROR_MESSAGES = {
     `A Network Error occured trying to fetch the skill ${id}.`,
 };
 
-const Skill = (props: SkillProps): ReactElement => {
+const Skill = (props: SkillProps) => {
   const skill = useSkill(props.id, props.customLang);
 
   if (skill.loading) {

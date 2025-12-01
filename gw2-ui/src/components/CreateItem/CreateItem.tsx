@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { capitalize } from '../../helpers/capitalize';
-import { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties } from 'react';
 import createItem, { type CreateItemProps } from '../../builder/createItem';
 import { useItems } from '../../gw2api/hooks';
 import type GW2ApiItem from '../../gw2api/types/items/item';
@@ -39,7 +39,7 @@ const SKILL_ERROR_MESSAGES = {
     `A Network Error occured trying to fetch the item ${id}.`,
 };
 
-const Item = (props: ItemProps): ReactElement => {
+const Item = (props: ItemProps) => {
   const {
     count = 1,
     text,

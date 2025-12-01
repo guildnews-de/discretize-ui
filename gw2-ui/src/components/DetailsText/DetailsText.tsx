@@ -1,4 +1,4 @@
-import { isValidElement, type ReactElement, type ReactNode } from 'react';
+import { isValidElement, type ReactNode } from 'react';
 import { capitalize } from '../../helpers/capitalize';
 import css from './DetailsText.module.css';
 
@@ -76,7 +76,7 @@ const DetailsText = ({
   lines,
   lineProps,
   className,
-}: DetailsProps): ReactElement => {
+}: DetailsProps) => {
   return (
     <div className={className}>
       {lines

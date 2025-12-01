@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import { type ReactElement } from 'react';
 import classes from './TextDivider.module.css';
 
 export interface TextDividerProps {

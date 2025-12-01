@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import {
   type CSSProperties,
   type MouseEventHandler,
-  type ReactElement,
 } from 'react';
 import Spinner from '../Spinner/Spinner';
 import css from './Icon.module.css';
@@ -43,7 +42,7 @@ const Icon = ({
   className,
   style: propStyle,
   onClick,
-}: IconProps): ReactElement => {
+}: IconProps) => {
   // css that is shared accross spinner and the actual component
   const sharedClassNames = clsx(
     gutterRight && css.gutterRight,

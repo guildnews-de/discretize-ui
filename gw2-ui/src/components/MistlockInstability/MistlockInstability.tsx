@@ -1,4 +1,4 @@
-import { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties } from 'react';
 
 import Effect from '../Effect/Effect';
 import { IconProps } from '../Icon/Icon';
@@ -36,7 +36,7 @@ const MistlockInstability = ({
   iconProps,
   wikiLinkProps,
   customLang,
-}: MistlockInstabilityProps): ReactElement => {
+}: MistlockInstabilityProps) => {
   const language = useAPILanguage(customLang);
   const nameTranslated = useTranslation(MISTLOCK_INSTABILITIES, name, language);
   const descriptionTranslated = useTranslation(

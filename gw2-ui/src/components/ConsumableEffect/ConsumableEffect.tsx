@@ -1,4 +1,4 @@
-import { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties } from 'react';
 
 import Effect from '../Effect/Effect';
 
@@ -26,7 +26,7 @@ const ConsumableEffect = ({
   disableIcon,
   className,
   style,
-}: ConsumableEffectProps): ReactElement => {
+}: ConsumableEffectProps) => {
   return (
     <Effect
       type="Consumable"

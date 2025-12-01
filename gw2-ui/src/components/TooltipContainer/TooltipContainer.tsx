@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { type PropsWithChildren, type ReactElement } from 'react';
+import { type PropsWithChildren } from 'react';
 import css from './TooltipContainer.module.css';
 
 export type TooltipContainerProps = PropsWithChildren<{
@@ -9,7 +9,7 @@ export type TooltipContainerProps = PropsWithChildren<{
 const TooltipContainer = ({
   children,
   className,
-}: TooltipContainerProps): ReactElement => {
+}: TooltipContainerProps) => {
   return <div className={clsx(css.root, className)}>{children}</div>;
 };
 

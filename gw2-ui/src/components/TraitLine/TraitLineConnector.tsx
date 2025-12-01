@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { type ReactElement, useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import css from './TraitlLineConnector.module.css';
 
 type Direction = 'up' | 'mid' | 'down';
@@ -17,7 +17,7 @@ const TraitLineConnector = ({
   end = 'mid',
   disabled,
   className,
-}: TraitLineConnectorProps): ReactElement => {
+}: TraitLineConnectorProps) => {
   const ref_container = useRef<HTMLDivElement>(null);
   const ref_line = useRef<HTMLDivElement>(null);
 

@@ -1,4 +1,4 @@
-import { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties } from 'react';
 import { type AugmentationsTypes } from '../../data/augmentations';
 import { translate, useAPILanguage } from '../../i18n';
 import {
@@ -18,7 +18,7 @@ export interface AugmentationProps {
   customLang?: string;
 }
 
-const Augmentation = (props: AugmentationProps): ReactElement => {
+const Augmentation = (props: AugmentationProps) => {
   const { name, customLang } = props;
   const language = useAPILanguage(customLang);
 

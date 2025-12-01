@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties } from 'react';
 import type GW2ApiSpecialization from '../../gw2api/types/specialization/specialization';
 import IconWithText from '../IconWithText/IconWithText';
 import professioncss from '../Profession/professions.module.css';
@@ -23,7 +23,7 @@ export interface SpecializationInternalProps {
 
 const SpecializationInternal = (
   props: SpecializationInternalProps,
-): ReactElement => {
+) => {
   const {
     data,
     text,

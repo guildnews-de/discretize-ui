@@ -1,4 +1,4 @@
-import { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties } from 'react';
 import { type BoonsTypes } from '../../data/boons';
 import { translate, useAPILanguage } from '../../i18n';
 import {
@@ -30,7 +30,7 @@ const Boon = ({
   wikiLinkProps,
   customLang,
   ...props
-}: BoonProps): ReactElement => {
+}: BoonProps) => {
   const language = useAPILanguage(customLang);
 
   const translation = translate(TRANSLATIONS_BOONS, name, language);

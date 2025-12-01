@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import { type ReactElement } from 'react';
 import { type ProfessionTypes } from '../../data/professions';
 import type GW2ApiSkill from '../../gw2api/types/skills/skill';
 import AbilityDetails from '../AbilityDetails/AbilityDetails';
@@ -24,7 +23,7 @@ export interface CustomComponentProps
   wikiLinkProps?: Partial<WikiLinkProps>;
 }
 
-const CustomComponent = (props: CustomComponentProps): ReactElement => {
+const CustomComponent = (props: CustomComponentProps) => {
   const {
     disableLink,
     disableTooltip,

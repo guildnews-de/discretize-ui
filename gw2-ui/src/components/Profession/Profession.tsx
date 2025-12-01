@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties } from 'react';
 import PROFESSIONS, {
   type EliteSpecTypes,
   type ProfessionTypes,
@@ -41,7 +41,7 @@ const Profession = ({
   iconProps,
   wikiLinkProps,
   customLang,
-}: ProfessionProps): ReactElement => {
+}: ProfessionProps) => {
   const language = useAPILanguage(customLang);
 
   let profession: ProfessionTypes | undefined;

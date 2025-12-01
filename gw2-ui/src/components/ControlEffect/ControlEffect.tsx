@@ -1,4 +1,4 @@
-import { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties } from 'react';
 
 import Effect from '../Effect/Effect';
 
@@ -29,7 +29,7 @@ const ControlEffect = ({
   wikiLinkProps,
   customLang,
   ...props
-}: ControlEffectProps): ReactElement => {
+}: ControlEffectProps) => {
   const language = useAPILanguage(customLang);
   const nameTranslated = useTranslation(CONTROL_EFFECTS, name, language);
   const descriptionTranslated = useTranslation(

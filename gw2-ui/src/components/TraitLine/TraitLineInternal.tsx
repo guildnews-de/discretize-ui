@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import {
   type CSSProperties,
   Fragment,
-  type ReactElement,
   useEffect,
   useState,
   type MouseEvent,
@@ -51,7 +50,7 @@ export interface TraitLineProps {
   customLang?: string;
 }
 
-const TraitLineInternal = (props: TraitLineProps): ReactElement => {
+const TraitLineInternal = (props: TraitLineProps) => {
   const {
     defaultSelected = [],
     selected: propsSelected = [],

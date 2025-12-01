@@ -1,4 +1,4 @@
-import { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties } from 'react';
 
 import Effect from '../Effect/Effect';
 import { IconProps } from '../Icon/Icon';
@@ -35,7 +35,7 @@ const CommonEffect = ({
   style,
 
   customLang,
-}: CommonEffectProps): ReactElement => {
+}: CommonEffectProps) => {
   const language = useAPILanguage(customLang);
   const name =
     propsName === 'Mistlock Singularity' ? 'Rigorous Certainty' : propsName;

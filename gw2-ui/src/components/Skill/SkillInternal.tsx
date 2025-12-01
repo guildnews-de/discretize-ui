@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties } from 'react';
 import { type ProfessionTypes } from '../../data/professions';
 import type GW2ApiSkill from '../../gw2api/types/skills/skill';
 import AbilityDetails from '../AbilityDetails/AbilityDetails';
@@ -24,7 +24,7 @@ export interface SkillInternalProps
   className?: string;
 }
 
-const SkillInternal = (props: SkillInternalProps): ReactElement => {
+const SkillInternal = (props: SkillInternalProps) => {
   const {
     data,
     text,

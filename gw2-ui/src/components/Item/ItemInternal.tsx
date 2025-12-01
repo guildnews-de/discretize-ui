@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { type CSSProperties, type ReactElement } from 'react';
+import { type CSSProperties } from 'react';
 import { createItem } from '../../builder';
 import { type ItemStatName } from '../../builder/itemStatNames';
 import type GW2ApiBackItemDetails from '../../gw2api/types/items/details/backItem';
@@ -35,7 +35,7 @@ export interface ItemInternalProps {
   iconProps?: Partial<IconProps>;
 }
 
-const ItemInternal = (props: ItemInternalProps): ReactElement => {
+const ItemInternal = (props: ItemInternalProps) => {
   const {
     dataItem: itemdata,
     dataUpgrades: upgradedata = [],
