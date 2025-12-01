@@ -19,6 +19,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build": "node ../build.mjs",
+    "typecheck": "tsc --noemit",
     "//serve": "rollup -c -w --environment BUILD:development",
     "deploy-storybook": "node ../deploy-storybook.mjs",
     "prepublish": "pnpm build",

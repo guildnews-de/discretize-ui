@@ -34,6 +34,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build": "node ../build.mjs",
+    "typecheck": "tsc --noemit",
     "api-typecheck": "node ./api_typecheck.mjs",
     "generate-from-api": "node --experimental-fetch ./generate_from_api.mjs",
     "deploy-storybook": "node ../deploy-storybook.mjs",
